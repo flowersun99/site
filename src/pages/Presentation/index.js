@@ -20,7 +20,7 @@ import presentThird from "assets/images/presentSet/third.jpg";
 import presentFour from "assets/images/presentSet/four.jpg";
 import presentFive from "assets/images/presentSet/five.jpg";
 import presentSix from "assets/images/presentSet/six.jpg";
-import howToComeImage from "assets/images/howtocome.png";
+
 import LocationInfo from "components/LocationInfo";
 import GiftSetSection from "components/GiftSetSection";
 import MenuCardGrid from "components/MenuCardGrid";
@@ -148,7 +148,7 @@ function Presentation() {
             zIndex: 10000,
           }}
         >
-          <Icon sx={{ fontSize: "4rem", backgroundColor: "white" }}>arrow_back</Icon>
+          <Icon sx={{ fontSize: "4rem", color: "white !important" }}>close</Icon>
         </MKBox>
 
         {/* 메뉴 항목들 */}
@@ -2058,7 +2058,6 @@ function Presentation() {
 
       {/* 금다연 오시는 길 섹션 */}
       <LocationInfo
-        mapImage={howToComeImage}
         layout="desktop"
         showTitle={true}
       />

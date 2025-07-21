@@ -83,18 +83,18 @@ const MenuCard = ({ item }) => (
       {/* 모바일 레이아웃 */}
       <MKBox sx={{ display: { xs: "block", md: "none" } }}>
         {/* 이미지 */}
-        <MKBox
-          component="img"
-          src={item.image}
-          alt={item.title}
-          sx={{
+      <MKBox
+        component="img"
+        src={item.image}
+        alt={item.title}
+        sx={{
             width: "100%",
             height: "200px",
-            objectFit: "cover",
-          }}
-        />
+          objectFit: "cover",
+        }}
+      />
 
-        {/* 카드 내용 */}
+      {/* 카드 내용 */}
         <MKBox sx={{ p: 4 }}>
           {/* 제목과 영문 제목 */}
           <MKBox sx={{ display: "flex", alignItems: "center", mb: 2, gap: 1 }}>
@@ -153,54 +153,54 @@ const MenuCard = ({ item }) => (
       {/* PC 레이아웃 */}
       <MKBox sx={{ display: { xs: "none", md: "flex" }, height: "100%" }}>
         {/* 텍스트 영역 */}
-        <MKBox
-          sx={{
+      <MKBox
+        sx={{
             flex: 1,
-            display: "flex",
-            flexDirection: "column",
-            p: 4,
-          }}
-        >
+          display: "flex",
+          flexDirection: "column",
+          p: 4,
+        }}
+      >
           {/* 제목과 영문 제목 */}
           <MKBox sx={{ display: "flex", alignItems: "center", mb: 2, gap: 1 }}>
-            <MKTypography
-              variant="h5"
-              color="dark"
-              sx={{
+        <MKTypography
+          variant="h5"
+          color="dark"
+          sx={{
                 fontSize: "1.3rem",
-                fontWeight: "bold",
-              }}
-            >
-              {item.title}
-            </MKTypography>
-            <MKTypography
-              variant="body2"
-              color="text"
-              sx={{
+            fontWeight: "bold",
+          }}
+        >
+          {item.title}
+        </MKTypography>
+        <MKTypography
+          variant="body2"
+          color="text"
+          sx={{
                 fontSize: "0.9rem",
-                opacity: 0.7,
-                fontStyle: "italic",
-              }}
-            >
-              {item.subtitle}
-            </MKTypography>
+            opacity: 0.7,
+            fontStyle: "italic",
+          }}
+        >
+          {item.subtitle}
+        </MKTypography>
           </MKBox>
 
-          {/* 설명 */}
-          <MKTypography
-            variant="body1"
-            color="dark"
-            mb={3}
-            sx={{
+        {/* 설명 */}
+        <MKTypography
+          variant="body1"
+          color="dark"
+          mb={3}
+          sx={{
               fontSize: "1rem",
-              fontWeight: 500,
-              lineHeight: 1.4,
-            }}
-          >
-            {item.description}
-          </MKTypography>
+            fontWeight: 500,
+            lineHeight: 1.4,
+          }}
+        >
+          {item.description}
+        </MKTypography>
 
-          {/* 메뉴 목록 */}
+        {/* 메뉴 목록 */}
           <MKTypography
             variant="body2"
             color="text"

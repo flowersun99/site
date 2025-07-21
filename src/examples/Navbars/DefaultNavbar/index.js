@@ -481,9 +481,11 @@ function DefaultNavbar({
         left={0}
         zIndex={3}
         sx={{
-          backgroundColor: transparent ? "transparent" : "black",
+          backgroundColor: transparent ? "transparent" : "transparent",
           backdropFilter: transparent ? "none" : "none",
-          background: transparent ? "none" : "black",
+          background: transparent
+            ? "none"
+            : "linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.3) 100%)",
           borderRadius: transparent ? "xl" : "0",
           margin: transparent ? undefined : 0,
           padding: transparent ? undefined : "16px 24px",
@@ -556,11 +558,13 @@ function DefaultNavbar({
             lineHeight={0}
             py={1.5}
             pl={1.5}
-            color={transparent ? "white" : "inherit"}
+            color="white"
             sx={{ cursor: "pointer" }}
             onClick={openMobileNavbar}
           >
-            <Icon fontSize="default">menu</Icon>
+            <Icon fontSize="default" sx={{ color: "white" }}>
+              menu
+            </Icon>
           </MKBox>
         </MKBox>
         <MKBox

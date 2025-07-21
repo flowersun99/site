@@ -14,7 +14,6 @@ import googleLogo from "assets/images/mobile_location/googlelogo.png";
 
 function LocationInfo({ 
   title = "금다연 오시는 길",
-  mapImage,
   showTitle = true,
   layout = "desktop", // "desktop" | "mobile"
   navigationButtons = [
@@ -81,24 +80,27 @@ function LocationInfo({
           px: 2,
         }}
       >
-        {/* 지도 이미지 */}
+                {/* 구글 지도 iframe */}
         <MKBox
           sx={{
             mb: 4,
             borderRadius: "12px",
             overflow: "hidden",
             shadow: "lg",
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            border: "2px solid #e9ecef",
           }}
         >
-          <MKBox
-            component="img"
-            src={mapImage}
-            alt={title}
-            sx={{
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.0765104876596!2d126.84791537728286!3d35.15471257276185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357189463dc0c66d%3A0xb61e913f2d15e736!2z6riI64uk7Jew!5e0!3m2!1sko!2skr!4v1753080287558!5m2!1sko!2skr"
+            style={{
               width: "100%",
-              height: "300px",
-              objectFit: "cover",
+              height: "100%",
+              border: "none",
             }}
+            title="금다연 위치"
           />
         </MKBox>
 
@@ -156,6 +158,8 @@ function LocationInfo({
             {address.note}
           </MKTypography>
         </MKBox>
+
+        
 
         {/* 네비게이션 버튼들 */}
         <MKBox sx={{ mb: 4 }}>
@@ -400,39 +404,74 @@ function LocationInfo({
             <MKBox
               sx={{
                 width: "100%",
-                height: "300px",
                 borderRadius: "12px",
                 overflow: "hidden",
                 border: "2px solid #e9ecef",
+                height: "450px",
+                position: "relative",
               }}
             >
-              <MKBox
-                component="img"
-                src={mapImage}
-                alt={title}
-                sx={{
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3262.076334632167!2d126.8479153762408!3d35.15471695871648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357189463dc0c66d%3A0xb61e913f2d15e736!2z6riI64uk7Jew!5e0!3m2!1sko!2skr!4v1753077229309!5m2!1sko!2skr"
+                style={{
                   width: "100%",
                   height: "100%",
-                  objectFit: "cover",
+                  border: "none",
+                  transform: "scale(1.1)",
+                  transformOrigin: "center center",
                 }}
+                title="금다연 위치"
               />
             </MKBox>
           </Grid>
 
-          {/* 길안내 버튼들 */}
+          {/* 길안내 섹션 */}
           <Grid item xs={12} md={4}>
-            <MKBox>
-              <MKTypography
-                variant="h5"
-                color="dark"
-                mb={3}
+            <MKBox sx={{ height: "400px", display: "flex", flexDirection: "column" }}>
+              {/* 위치 정보 텍스트 */}
+              <MKBox
                 sx={{
-                  fontSize: { xs: "1.2rem", md: "1.5rem" },
-                  fontWeight: "bold",
+                  mb: 3,
+                  p: 3,
+                  backgroundColor: "#f8f9fa",
+                  borderRadius: "12px",
+                  border: "1px solid #e9ecef",
+                  flex: "0 0 auto",
                 }}
               >
-                길안내
-              </MKTypography>
+                <MKTypography
+                  variant="body2"
+                  color="dark"
+                  sx={{
+                    fontWeight: 500,
+                    lineHeight: 1.6,
+                    textAlign: "center",
+                    fontSize: "0.9rem",
+                  }}
+                >
+                  광주광역시청과 직선거리 500M
+                  <br />
+                  주변 특급호텔, 비지니스호텔과 200M 이내에 위치
+                  <br />
+                  광주상무지구 중심상업지역에 자리하여
+                  <br />
+                  고속도로 및 기타지역에서 사통팔달 접근이 용이함.
+                </MKTypography>
+              </MKBox>
+
+              {/* 길안내 버튼들 */}
+              <MKBox sx={{ flex: "1 1 auto" }}>
+                <MKTypography
+                  variant="h5"
+                  color="dark"
+                  mb={3}
+                  sx={{
+                    fontSize: { xs: "1.2rem", md: "1.5rem" },
+                    fontWeight: "bold",
+                  }}
+                >
+                  길안내
+                </MKTypography>
 
               {navigationButtons.map((button, index) => (
                 <MKBox
@@ -490,8 +529,11 @@ function LocationInfo({
                 </MKBox>
               ))}
             </MKBox>
-          </Grid>
+          </MKBox>
         </Grid>
+        </Grid>
+
+        
 
         {/* 주차정보 섹션 */}
         <MKBox>
@@ -627,7 +669,6 @@ function LocationInfo({
 
 LocationInfo.propTypes = {
   title: PropTypes.string,
-  mapImage: PropTypes.string.isRequired,
   showTitle: PropTypes.bool,
   layout: PropTypes.oneOf(["desktop", "mobile"]),
   navigationButtons: PropTypes.arrayOf(

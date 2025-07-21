@@ -76,12 +76,12 @@ function DefaultNavbarDropdown({
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
-          color={light ? "white" : "dark"}
+          color="white"
           sx={{
             fontWeight: "100%",
             ml: 1,
             mr: 0.25,
-            fontSize: "1.1rem",
+            fontSize: "1.5rem",
             lineHeight: "30px",
             height: "30px",
             display: "flex",
