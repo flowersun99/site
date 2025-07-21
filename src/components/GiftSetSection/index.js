@@ -20,7 +20,7 @@ function GiftSetSection({
   showTitle = true,
   showSubtitle = true,
   showSmartStoreButton = true,
-  smartStoreUrl = "https://smartstore.naver.com/geumdayeon",
+  smartStoreUrl = "https://smartstore.naver.com/gdycokr?NaPm=ct%3Dmdcghdrw%7Cci%3Dshopn%7Ctr%3Dnslsl%7Chk%3Dda31df3d77ca393e48fddca66c3cc7e941aa6df5%7Ctrx%3Dundefined",
   smartStoreButtonText = "금다연 네이버 스마트스토어"
 }) {
   const getContainerStyle = () => {

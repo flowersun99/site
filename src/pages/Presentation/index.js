@@ -696,7 +696,7 @@ function Presentation() {
               <MKBox>
                 <MKTypography
                   variant="h6"
-                  color="black"
+                  color="dark"
                   sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
@@ -710,7 +710,7 @@ function Presentation() {
               <MKBox>
                 <MKTypography
                   variant="h6"
-                  color="black"
+                  color="dark"
                   sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
@@ -724,7 +724,7 @@ function Presentation() {
               <MKBox>
                 <MKTypography
                   variant="h6"
-                  color="black"
+                  color="dark"
                   sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
