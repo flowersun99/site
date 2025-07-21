@@ -7,6 +7,11 @@ import MKTypography from "components/MKTypography";
 import Icon from "@mui/material/Icon";
 import Grid from "@mui/material/Grid";
 
+// Images
+import naverLogo from "assets/images/mobile_location/naverlogo.png";
+import kakaoLogo from "assets/images/mobile_location/kakologo.png";
+import googleLogo from "assets/images/mobile_location/googlelogo.png";
+
 function LocationInfo({ 
   title = "금다연 오시는 길",
   mapImage,
@@ -179,7 +184,7 @@ function LocationInfo({
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    padding: "20px",
+                    padding: "16px",
                     backgroundColor: "white",
                     borderRadius: "12px",
                     textDecoration: "none",
@@ -192,20 +197,26 @@ function LocationInfo({
                     },
                   }}
                 >
-                  <Icon
+                  <MKBox
+                    component="img"
+                    src={
+                      button.name === "네이버 지도" ? naverLogo :
+                      button.name === "구글 지도" ? googleLogo :
+                      kakaoLogo
+                    }
+                    alt={button.name}
                     sx={{
-                      fontSize: "2.5rem",
-                      color: button.color,
+                      width: "32px",
+                      height: "32px",
+                      objectFit: "contain",
                       mb: 1,
                     }}
-                  >
-                    {button.icon}
-                  </Icon>
+                  />
                   <MKTypography
                     variant="body1"
                     color="dark"
                     sx={{
-                      fontSize: "0.9rem",
+                      fontSize: "0.85rem",
                       fontWeight: "bold",
                       textAlign: "center",
                     }}
@@ -250,10 +261,80 @@ function LocationInfo({
                   sx={{
                     fontWeight: "bold",
                     fontSize: "1rem",
+                    flexGrow: 1,
                   }}
                 >
                   {parking.title}
                 </MKTypography>
+                {/* 주차장 링크 버튼들 */}
+                <MKBox sx={{ display: "flex", gap: 1 }}>
+                  <MKBox
+                    component="a"
+                    href={parking.links.naver}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "28px",
+                      height: "28px",
+                      backgroundColor: "white",
+                      borderRadius: "6px",
+                      textDecoration: "none",
+                      border: "1px solid #e0e0e0",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-1px)",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                      },
+                    }}
+                  >
+                    <MKBox
+                      component="img"
+                      src={naverLogo}
+                      alt="네이버"
+                      sx={{
+                        width: "16px",
+                        height: "16px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </MKBox>
+                  <MKBox
+                    component="a"
+                    href={parking.links.kakao}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "28px",
+                      height: "28px",
+                      backgroundColor: "white",
+                      borderRadius: "6px",
+                      textDecoration: "none",
+                      border: "1px solid #e0e0e0",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-1px)",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                      },
+                    }}
+                  >
+                    <MKBox
+                      component="img"
+                      src={kakaoLogo}
+                      alt="카카오"
+                      sx={{
+                        width: "16px",
+                        height: "16px",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </MKBox>
+                </MKBox>
               </MKBox>
               <MKTypography
                 variant="body1"
@@ -262,65 +343,10 @@ function LocationInfo({
                   fontSize: "0.9rem",
                   lineHeight: 1.6,
                   ml: 3,
-                  mb: 2,
                 }}
               >
                 {parking.description}
               </MKTypography>
-              
-              {/* 주차장 링크 버튼들 */}
-              <MKBox sx={{ ml: 3, display: "flex", gap: 1 }}>
-                <MKBox
-                  component="a"
-                  href={parking.links.naver}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "8px 12px",
-                    backgroundColor: "#03C75A",
-                    color: "white",
-                    borderRadius: "6px",
-                    textDecoration: "none",
-                    fontSize: "0.8rem",
-                    fontWeight: "bold",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      backgroundColor: "#02A94A",
-                      transform: "translateY(-1px)",
-                    },
-                  }}
-                >
-                  네이버
-                </MKBox>
-                <MKBox
-                  component="a"
-                  href={parking.links.kakao}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    padding: "8px 12px",
-                    backgroundColor: "#FEE500",
-                    color: "#3C1E1E",
-                    borderRadius: "6px",
-                    textDecoration: "none",
-                    fontSize: "0.8rem",
-                    fontWeight: "bold",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      backgroundColor: "#FFD700",
-                      transform: "translateY(-1px)",
-                    },
-                  }}
-                >
-                  카카오
-                </MKBox>
-              </MKBox>
             </MKBox>
           ))}
         </MKBox>
@@ -421,30 +447,46 @@ function LocationInfo({
                     justifyContent: "space-between",
                     width: "100%",
                     padding: "16px 20px",
-                    backgroundColor: button.color,
-                    color: button.color === "#FEE500" ? "#3C1E1E" : "white",
+                    backgroundColor: "white",
+                    color: "dark",
                     borderRadius: "12px",
                     textDecoration: "none",
                     marginBottom: "12px",
+                    border: "2px solid #e9ecef",
                     transition: "all 0.3s ease",
                     "&:hover": {
-                      backgroundColor: button.color === "#03C75A" ? "#02A94A" : 
-                                   button.color === "#4285F4" ? "#3367D6" : "#FFD700",
                       transform: "translateY(-2px)",
-                      boxShadow: `0 4px 12px ${button.color}40`,
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                      borderColor: button.color,
                     },
                   }}
                 >
-                  <MKTypography
-                    variant="body1"
-                    sx={{
-                      fontWeight: "bold",
-                      fontSize: "1rem",
-                    }}
-                  >
-                    {button.name}
-                  </MKTypography>
-                  <Icon>arrow_forward</Icon>
+                  <MKBox sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                    <MKBox
+                      component="img"
+                      src={
+                        button.name === "네이버 지도" ? naverLogo :
+                        button.name === "구글 지도" ? googleLogo :
+                        kakaoLogo
+                      }
+                      alt={button.name}
+                      sx={{
+                        width: "24px",
+                        height: "24px",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <MKTypography
+                      variant="body1"
+                      sx={{
+                        fontWeight: "bold",
+                        fontSize: "1rem",
+                      }}
+                    >
+                      {button.name}
+                    </MKTypography>
+                  </MKBox>
+                  <Icon sx={{ color: button.color }}>arrow_forward</Icon>
                 </MKBox>
               ))}
             </MKBox>
@@ -487,10 +529,80 @@ function LocationInfo({
                       sx={{
                         fontWeight: "bold",
                         fontSize: "1.1rem",
+                        flexGrow: 1,
                       }}
                     >
                       {parking.title}
                     </MKTypography>
+                    {/* 주차장 링크 버튼들 */}
+                    <MKBox sx={{ display: "flex", gap: 1 }}>
+                      <MKBox
+                        component="a"
+                        href={parking.links.naver}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "32px",
+                          height: "32px",
+                          backgroundColor: "white",
+                          borderRadius: "6px",
+                          textDecoration: "none",
+                          border: "1px solid #e0e0e0",
+                          transition: "all 0.3s ease",
+                          "&:hover": {
+                            transform: "translateY(-1px)",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                          },
+                        }}
+                      >
+                        <MKBox
+                          component="img"
+                          src={naverLogo}
+                          alt="네이버"
+                          sx={{
+                            width: "18px",
+                            height: "18px",
+                            objectFit: "contain",
+                          }}
+                        />
+                      </MKBox>
+                      <MKBox
+                        component="a"
+                        href={parking.links.kakao}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: "32px",
+                          height: "32px",
+                          backgroundColor: "white",
+                          borderRadius: "6px",
+                          textDecoration: "none",
+                          border: "1px solid #e0e0e0",
+                          transition: "all 0.3s ease",
+                          "&:hover": {
+                            transform: "translateY(-1px)",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                          },
+                        }}
+                      >
+                        <MKBox
+                          component="img"
+                          src={kakaoLogo}
+                          alt="카카오"
+                          sx={{
+                            width: "18px",
+                            height: "18px",
+                            objectFit: "contain",
+                          }}
+                        />
+                      </MKBox>
+                    </MKBox>
                   </MKBox>
                   <MKTypography
                     variant="body1"
@@ -498,70 +610,11 @@ function LocationInfo({
                     sx={{
                       lineHeight: 1.6,
                       fontSize: "0.95rem",
-                      mb: 3,
                       flexGrow: 1,
                     }}
                   >
                     {parking.description}
                   </MKTypography>
-                  
-                  {/* 주차장 링크 버튼들 */}
-                  <MKBox sx={{ display: "flex", gap: 1 }}>
-                    <MKBox
-                      component="a"
-                      href={parking.links.naver}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "10px 16px",
-                        backgroundColor: "#03C75A",
-                        color: "white",
-                        borderRadius: "8px",
-                        textDecoration: "none",
-                        fontSize: "0.9rem",
-                        fontWeight: "bold",
-                        transition: "all 0.3s ease",
-                        flex: 1,
-                        "&:hover": {
-                          backgroundColor: "#02A94A",
-                          transform: "translateY(-2px)",
-                          boxShadow: "0 4px 8px rgba(3, 199, 90, 0.3)",
-                        },
-                      }}
-                    >
-                      네이버
-                    </MKBox>
-                    <MKBox
-                      component="a"
-                      href={parking.links.kakao}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        padding: "10px 16px",
-                        backgroundColor: "#FEE500",
-                        color: "#3C1E1E",
-                        borderRadius: "8px",
-                        textDecoration: "none",
-                        fontSize: "0.9rem",
-                        fontWeight: "bold",
-                        transition: "all 0.3s ease",
-                        flex: 1,
-                        "&:hover": {
-                          backgroundColor: "#FFD700",
-                          transform: "translateY(-2px)",
-                          boxShadow: "0 4px 8px rgba(254, 229, 0, 0.3)",
-                        },
-                      }}
-                    >
-                      카카오
-                    </MKBox>
-                  </MKBox>
                 </MKBox>
               </Grid>
             ))}
