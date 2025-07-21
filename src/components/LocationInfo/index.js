@@ -37,16 +37,28 @@ function LocationInfo({
       title: "제 1주차장",
       description: "본 건물 1층 (중, 소형 / 발렛서비스)",
       iconColor: "#007bff",
+      links: {
+        naver: "https://naver.me/IFgqBfu9",
+        kakao: "https://place.map.kakao.com/8238221"
+      }
     },
     {
       title: "제 2주차장",
       description: "대아주차장 (대형 SUV / 평일 6시 이후, 주말 상시)",
       iconColor: "#28a745",
+      links: {
+        naver: "https://naver.me/GDam2Xve",
+        kakao: "https://kko.kakao.com/FRYyX-KoLT"
+      }
     },
     {
       title: "제 3주차장",
       description: "상무주차장 (대형 SUV / 상시 가능)",
       iconColor: "#dc3545",
+      links: {
+        naver: "https://naver.me/FPUXEP5y",
+        kakao: "https://kko.kakao.com/2FRPBMiWsn"
+      }
     },
   ],
   address = {
@@ -227,7 +239,7 @@ function LocationInfo({
             주차 안내
           </MKTypography>
           {parkingInfo.map((parking, index) => (
-            <MKBox key={index} sx={{ mb: 2 }}>
+            <MKBox key={index} sx={{ mb: 3 }}>
               <MKBox display="flex" alignItems="center" mb={1}>
                 <Icon sx={{ color: parking.iconColor, mr: 1, fontSize: "1.2rem" }}>
                   local_parking
@@ -250,10 +262,65 @@ function LocationInfo({
                   fontSize: "0.9rem",
                   lineHeight: 1.6,
                   ml: 3,
+                  mb: 2,
                 }}
               >
                 {parking.description}
               </MKTypography>
+              
+              {/* 주차장 링크 버튼들 */}
+              <MKBox sx={{ ml: 3, display: "flex", gap: 1 }}>
+                <MKBox
+                  component="a"
+                  href={parking.links.naver}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "8px 12px",
+                    backgroundColor: "#03C75A",
+                    color: "white",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    fontSize: "0.8rem",
+                    fontWeight: "bold",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      backgroundColor: "#02A94A",
+                      transform: "translateY(-1px)",
+                    },
+                  }}
+                >
+                  네이버
+                </MKBox>
+                <MKBox
+                  component="a"
+                  href={parking.links.kakao}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: "8px 12px",
+                    backgroundColor: "#FEE500",
+                    color: "#3C1E1E",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                    fontSize: "0.8rem",
+                    fontWeight: "bold",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      backgroundColor: "#FFD700",
+                      transform: "translateY(-1px)",
+                    },
+                  }}
+                >
+                  카카오
+                </MKBox>
+              </MKBox>
             </MKBox>
           ))}
         </MKBox>
@@ -408,6 +475,8 @@ function LocationInfo({
                     borderRadius: "12px",
                     border: "1px solid #e9ecef",
                     height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
                   }}
                 >
                   <MKBox display="flex" alignItems="center" mb={2}>
@@ -429,10 +498,70 @@ function LocationInfo({
                     sx={{
                       lineHeight: 1.6,
                       fontSize: "0.95rem",
+                      mb: 3,
+                      flexGrow: 1,
                     }}
                   >
                     {parking.description}
                   </MKTypography>
+                  
+                  {/* 주차장 링크 버튼들 */}
+                  <MKBox sx={{ display: "flex", gap: 1 }}>
+                    <MKBox
+                      component="a"
+                      href={parking.links.naver}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "10px 16px",
+                        backgroundColor: "#03C75A",
+                        color: "white",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                        transition: "all 0.3s ease",
+                        flex: 1,
+                        "&:hover": {
+                          backgroundColor: "#02A94A",
+                          transform: "translateY(-2px)",
+                          boxShadow: "0 4px 8px rgba(3, 199, 90, 0.3)",
+                        },
+                      }}
+                    >
+                      네이버
+                    </MKBox>
+                    <MKBox
+                      component="a"
+                      href={parking.links.kakao}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        padding: "10px 16px",
+                        backgroundColor: "#FEE500",
+                        color: "#3C1E1E",
+                        borderRadius: "8px",
+                        textDecoration: "none",
+                        fontSize: "0.9rem",
+                        fontWeight: "bold",
+                        transition: "all 0.3s ease",
+                        flex: 1,
+                        "&:hover": {
+                          backgroundColor: "#FFD700",
+                          transform: "translateY(-2px)",
+                          boxShadow: "0 4px 8px rgba(254, 229, 0, 0.3)",
+                        },
+                      }}
+                    >
+                      카카오
+                    </MKBox>
+                  </MKBox>
                 </MKBox>
               </Grid>
             ))}
@@ -461,6 +590,10 @@ LocationInfo.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       iconColor: PropTypes.string.isRequired,
+      links: PropTypes.shape({
+        naver: PropTypes.string.isRequired,
+        kakao: PropTypes.string.isRequired,
+      }),
     })
   ),
   address: PropTypes.shape({

@@ -31,13 +31,16 @@ import sliceFour from "assets/images/slice/four.jpg";
 import sliceFive from "assets/images/slice/five.jpg";
 import sliceSix from "assets/images/slice/six.jpg";
 import sliceSeven from "assets/images/slice/seven.jpg";
+import lunchmenu1 from "assets/images/lunchmenu/lunchmenu1.jpg";
+import lunchmenu2 from "assets/images/lunchmenu/lunchmenu2.jpg";
+import lunchmenu3 from "assets/images/lunchmenu/lunchmenu3.png";
 
 
 
 function Presentation() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+
   const sliceImages = [sliceOne, sliceTwo, sliceThree, sliceFour, sliceFive, sliceSix, sliceSeven];
 
   const giftSets = [
@@ -82,16 +85,16 @@ function Presentation() {
       price: "35,000원",
     },
   ];
-  
-  
+
+
   const handlePreviousImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === 0 ? sliceImages.length - 1 : prevIndex - 1
     );
   };
-  
+
   const handleNextImage = () => {
-    setCurrentImageIndex((prevIndex) => 
+    setCurrentImageIndex((prevIndex) =>
       prevIndex === sliceImages.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -106,14 +109,14 @@ function Presentation() {
 
   return (
     <>
-      <DefaultNavbar 
-        routes={routes} 
-        transparent 
-        light 
-        sticky 
+      <DefaultNavbar
+        routes={routes}
+        transparent
+        light
+        sticky
         onMobileMenuToggle={toggleMobileMenu}
       />
-      
+
       {/* 모바일 메뉴 오버레이 */}
       <MKBox
         sx={{
@@ -156,57 +159,57 @@ function Presentation() {
             mt: 4,
           }}
         >
-                      {/* 금다연 이야기 */}
-            <MKBox
-              component="a"
-              href="/about"
-              onClick={closeMobileMenu}
-              sx={{
-                display: "block",
-                width: "100%",
-                py: 3,
-                px: 2,
-                color: "white",
-                textDecoration: "none",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                textAlign: "center",
-                fontSize: "1.1rem",
-                fontWeight: "bold",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              <span style={{ color: "white" }}>금다연 이야기 Story</span>
-            </MKBox>
+          {/* 금다연 이야기 */}
+          <MKBox
+            component="a"
+            href="/about"
+            onClick={closeMobileMenu}
+            sx={{
+              display: "block",
+              width: "100%",
+              py: 3,
+              px: 2,
+              color: "white",
+              textDecoration: "none",
+              borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+              textAlign: "center",
+              fontSize: "1.1rem",
+              fontWeight: "bold",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+            }}
+          >
+            <span style={{ color: "white" }}>금다연 이야기 Story</span>
+          </MKBox>
 
-            {/* 메뉴 */}
-            <MKBox
-              component="a"
-              href="/menu"
-              onClick={closeMobileMenu}
-              sx={{
-                display: "block",
-                width: "100%",
-                py: 3,
-                px: 2,
-                color: "white",
-                textDecoration: "none",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                textAlign: "center",
-                fontSize: "1.1rem",
-                fontWeight: "bold",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                "&:hover": {
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                },
-              }}
-            >
-              <span style={{ color: "white" }}>메뉴 Menu</span>
-            </MKBox>
+          {/* 메뉴 */}
+          <MKBox
+            component="a"
+            href="/menu"
+            onClick={closeMobileMenu}
+            sx={{
+              display: "block",
+              width: "100%",
+              py: 3,
+              px: 2,
+              color: "white",
+              textDecoration: "none",
+              borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+              textAlign: "center",
+              fontSize: "1.1rem",
+              fontWeight: "bold",
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+              },
+            }}
+          >
+            <span style={{ color: "white" }}>메뉴 Menu</span>
+          </MKBox>
 
           {/* 위치 */}
           <MKBox
@@ -502,18 +505,18 @@ function Presentation() {
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
               >
-                <MKTypography 
-                  variant="h4" 
-                  color="white" 
-                  fontWeight="bold" 
+                <MKTypography
+                  variant="h4"
+                  color="white"
+                  fontWeight="bold"
                   mb={1}
                   sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
                 >
                   약선 한정식
                 </MKTypography>
-                <MKTypography 
-                  variant="body1" 
-                  color="white" 
+                <MKTypography
+                  variant="body1"
+                  color="white"
                   opacity={0.9}
                   sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
                 >
@@ -533,18 +536,18 @@ function Presentation() {
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
               >
-                <MKTypography 
-                  variant="h4" 
-                  color="white" 
-                  fontWeight="bold" 
+                <MKTypography
+                  variant="h4"
+                  color="white"
+                  fontWeight="bold"
                   mb={1}
                   sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
                 >
                   최대 60명 수용
                 </MKTypography>
-                <MKTypography 
-                  variant="body1" 
-                  color="white" 
+                <MKTypography
+                  variant="body1"
+                  color="white"
                   opacity={0.9}
                   sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
                 >
@@ -564,18 +567,18 @@ function Presentation() {
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
               >
-                <MKTypography 
-                  variant="h4" 
-                  color="white" 
-                  fontWeight="bold" 
+                <MKTypography
+                  variant="h4"
+                  color="white"
+                  fontWeight="bold"
                   mb={1}
                   sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
                 >
                   명품 선물세트
                 </MKTypography>
-                <MKTypography 
-                  variant="body1" 
-                  color="white" 
+                <MKTypography
+                  variant="body1"
+                  color="white"
                   opacity={0.9}
                   sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
                 >
@@ -691,10 +694,10 @@ function Presentation() {
               }}
             >
               <MKBox>
-                <MKTypography 
-                  variant="h6" 
-                  color="black" 
-                  sx={{ 
+                <MKTypography
+                  variant="h6"
+                  color="black"
+                  sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
                     mb: { xs: 1, md: 0.5 },
@@ -705,10 +708,10 @@ function Presentation() {
               </MKBox>
 
               <MKBox>
-                <MKTypography 
-                  variant="h6" 
-                  color="black" 
-                  sx={{ 
+                <MKTypography
+                  variant="h6"
+                  color="black"
+                  sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
                     mb: { xs: 1, md: 0.5 },
@@ -719,10 +722,10 @@ function Presentation() {
               </MKBox>
 
               <MKBox>
-                <MKTypography 
-                  variant="h6" 
-                  color="black" 
-                  sx={{ 
+                <MKTypography
+                  variant="h6"
+                  color="black"
+                  sx={{
                     fontWeight: "bold",
                     fontSize: { xs: "1.1rem", md: "1rem" },
                     mb: { xs: 1, md: 0.5 },
@@ -765,7 +768,7 @@ function Presentation() {
             display: { xs: "none", md: "block" },
           }}
         />
-        
+
         {/* 모바일용 메뉴 컨테이너 - 검정색 테두리만 */}
         <MKBox
           sx={{
@@ -786,9 +789,9 @@ function Presentation() {
             color="white"
             textAlign="center"
             mb={4}
-            sx={{ 
-              fontSize: "2rem", 
-              fontWeight: "bold" 
+            sx={{
+              fontSize: "2rem",
+              fontWeight: "bold"
             }}
           >
             한정식 메뉴
@@ -800,9 +803,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -825,9 +828,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -840,9 +843,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -865,9 +868,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -880,9 +883,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -905,9 +908,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -920,9 +923,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -945,9 +948,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -960,9 +963,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -985,9 +988,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -1000,9 +1003,9 @@ function Presentation() {
             <MKBox mb={3}>
               <MKBox display="flex" flexDirection="column">
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <MKTypography 
-                    variant="h5" 
-                    color="white" 
+                  <MKTypography
+                    variant="h5"
+                    color="white"
                     fontWeight="bold"
                     sx={{ fontSize: "1.3rem", mr: 1 }}
                   >
@@ -1025,9 +1028,9 @@ function Presentation() {
                     mb: 1,
                   }}
                 />
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.2rem" }}
                 >
@@ -1054,9 +1057,9 @@ function Presentation() {
             color="white"
             textAlign="center"
             mb={4}
-            sx={{ 
-              fontSize: "2.5rem", 
-              fontWeight: "bold" 
+            sx={{
+              fontSize: "2.5rem",
+              fontWeight: "bold"
             }}
           >
             한정식 메뉴
@@ -1066,17 +1069,17 @@ function Presentation() {
           <MKBox>
             {/* 모란상 A */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1086,7 +1089,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1095,10 +1098,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1110,9 +1113,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1123,17 +1126,17 @@ function Presentation() {
 
             {/* 모란상 B */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1143,7 +1146,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1152,10 +1155,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1167,9 +1170,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1180,17 +1183,17 @@ function Presentation() {
 
             {/* 매화상 */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1200,7 +1203,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1209,10 +1212,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1224,9 +1227,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1237,17 +1240,17 @@ function Presentation() {
 
             {/* 연꽃상 */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1257,7 +1260,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1266,10 +1269,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1281,9 +1284,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1294,17 +1297,17 @@ function Presentation() {
 
             {/* 무궁화상 */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1314,7 +1317,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1323,10 +1326,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1337,9 +1340,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1350,17 +1353,17 @@ function Presentation() {
 
             {/* 금다연상 */}
             <MKBox mb={3}>
-              <MKBox 
-                display="flex" 
+              <MKBox
+                display="flex"
                 flexDirection="row"
-                justifyContent="space-between" 
+                justifyContent="space-between"
                 alignItems="center"
               >
                 <MKBox>
                   <MKBox display="flex" flexDirection="row" alignItems="center">
-                    <MKTypography 
-                      variant="h5" 
-                      color="white" 
+                    <MKTypography
+                      variant="h5"
+                      color="white"
                       fontWeight="bold"
                       sx={{ fontSize: "1.5rem" }}
                     >
@@ -1370,7 +1373,7 @@ function Presentation() {
                       variant="body2"
                       color="white"
                       opacity={0.8}
-                      sx={{ 
+                      sx={{
                         fontSize: "0.8rem",
                         ml: 1,
                       }}
@@ -1379,10 +1382,10 @@ function Presentation() {
                     </MKTypography>
                   </MKBox>
                 </MKBox>
-                <MKBox 
-                  display="flex" 
-                  alignItems="center" 
-                  flex={1} 
+                <MKBox
+                  display="flex"
+                  alignItems="center"
+                  flex={1}
                   mx={2}
                 >
                   <MKBox
@@ -1393,9 +1396,9 @@ function Presentation() {
                     }}
                   />
                 </MKBox>
-                <MKTypography 
-                  variant="h5" 
-                  color="white" 
+                <MKTypography
+                  variant="h5"
+                  color="white"
                   fontWeight="bold"
                   sx={{ fontSize: "1.5rem" }}
                 >
@@ -1451,9 +1454,304 @@ function Presentation() {
             >
               전통 한식의 정성을 담은 다양한 상차림
             </MKTypography>
+
           </MKBox>
 
-                    <MenuCardGrid />
+                              <MenuCardGrid />
+        </MKBox>
+        
+        {/* 메뉴 변경 안내 */}
+        <MKBox sx={{ mt: 6 }}>
+          <MKTypography
+            variant="body2"
+            color="text"
+            textAlign="center"
+            sx={{
+              fontSize: "0.9rem",
+              opacity: 0.8,
+            }}
+          >
+            *메뉴는 구매사정과 계절적 특성에따라 변경될수 있습니다
+          </MKTypography>
+        </MKBox>
+
+      </MKBox>
+
+      {/* 모바일 점심 특선 메뉴 섹션 */}
+      <MKBox
+        sx={{
+          width: "100%",
+          display: { xs: "block", md: "none" },
+          backgroundColor: "white",
+          py: 4,
+        }}
+      >
+        <MKBox
+          sx={{
+            maxWidth: "600px",
+            margin: "0 auto",
+            px: 2,
+          }}
+        >
+          {/* 제목 */}
+          <MKTypography
+            variant="h3"
+            color="dark"
+            textAlign="center"
+            mb={2}
+            sx={{
+              fontSize: "1.8rem",
+              fontWeight: "bold",
+            }}
+          >
+            점심 특선 메뉴
+          </MKTypography>
+
+          {/* 구분선 */}
+          <MKBox
+            sx={{
+              width: "100%",
+              height: "1px",
+              backgroundColor: "#e0e0e0",
+              mb: 2,
+            }}
+          />
+
+          {/* 메뉴 설명 */}
+          <MKTypography
+            variant="body2"
+            color="text"
+            textAlign="center"
+            mb={4}
+            sx={{
+              fontSize: "0.9rem",
+              opacity: 0.8,
+            }}
+          >
+            * 11:30 ~ 14:30 주문 / 토·일·공휴일 제외
+          </MKTypography>
+
+          {/* 메뉴 항목들 */}
+          <MKBox sx={{ mb: 4 }}>
+            {/* 특 굴비(부세)정식 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                특 굴비(부세)정식
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                26,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 굴비(부세)정식 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                굴비(부세)정식
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                23,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 활우럭 지리 / 매운탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                활우럭 지리 / 매운탕
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                20,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 속풀이 전복 해물탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                속풀이 전복 해물탕
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                20,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 연포탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                연포탕
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                싯가
+              </MKTypography>
+            </MKBox>
+
+            {/* 능이버섯 전복 삼계탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                능이버섯 전복 삼계탕(계절메뉴)
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                25,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 금다연 점심특선 */}
+            <MKBox sx={{ mb: 2 }}>
+              <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                  금다연 점심특선
+                </MKTypography>
+              </MKBox>
+              <MKBox sx={{ pl: 2 }}>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    2인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    56,000원
+                  </MKTypography>
+                </MKBox>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    3인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    69,000원
+                  </MKTypography>
+                </MKBox>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    4인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    84,000원
+                  </MKTypography>
+                </MKBox>
+              </MKBox>
+            </MKBox>
+          </MKBox>
+
+          {/* 음식 이미지들 */}
+          <MKBox
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: "center",
+            }}
+          >
+            <MKBox
+              component="img"
+              src={lunchmenu3}
+              alt="음식 이미지 1"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+            <MKBox
+              component="img"
+              src={lunchmenu2}
+              alt="음식 이미지 2"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+            <MKBox
+              component="img"
+              src={lunchmenu1}
+              alt="음식 이미지 3"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+          </MKBox>
         </MKBox>
       </MKBox>
 
@@ -1633,118 +1931,118 @@ function Presentation() {
             </MKBox>
           </MKBox>
 
-                      {/* 중앙 이미지 갤러리 */}
+          {/* 중앙 이미지 갤러리 */}
+          <MKBox
+            sx={{
+              position: "relative",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            {/* 중앙 이미지 */}
             <MKBox
               sx={{
                 position: "relative",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: "100%",
+                borderRadius: "16px",
+                overflow: "hidden",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
               }}
             >
-              {/* 중앙 이미지 */}
               <MKBox
+                component="img"
+                src={sliceImages[currentImageIndex]}
+                alt={`방 이미지 ${currentImageIndex + 1}`}
                 sx={{
-                  position: "relative",
-                  borderRadius: "16px",
-                  overflow: "hidden",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
+                  width: "361px",
+                  height: "240px",
+                  display: "block",
+                  objectFit: "cover",
+                  transition: "opacity 0.3s ease",
+                }}
+              />
+
+              {/* 왼쪽 화살표 */}
+              <MKBox
+                onClick={handlePreviousImage}
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "10px",
+                  transform: "translateY(-50%)",
+                  backgroundColor: "rgba(255, 255, 255, 0.9)",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 1)",
+                    transform: "translateY(-50%) scale(1.1)",
+                  },
                 }}
               >
-                <MKBox
-                  component="img"
-                  src={sliceImages[currentImageIndex]}
-                  alt={`방 이미지 ${currentImageIndex + 1}`}
-                  sx={{
-                    width: "361px",
-                    height: "240px",
-                    display: "block",
-                    objectFit: "cover",
-                    transition: "opacity 0.3s ease",
-                  }}
-                />
-                
-                {/* 왼쪽 화살표 */}
-                <MKBox
-                  onClick={handlePreviousImage}
-                  sx={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "10px",
-                    transform: "translateY(-50%)",
-                    backgroundColor: "rgba(255, 255, 255, 0.9)",
-                    borderRadius: "50%",
-                    width: "30px",
-                    height: "30px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 1)",
-                      transform: "translateY(-50%) scale(1.1)",
-                    },
-                  }}
-                >
-                  <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_left</Icon>
-                </MKBox>
+                <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_left</Icon>
+              </MKBox>
 
-                {/* 오른쪽 화살표 */}
-                <MKBox
-                  onClick={handleNextImage}
-                  sx={{
-                    position: "absolute",
-                    top: "50%",
-                    right: "10px",
-                    transform: "translateY(-50%)",
-                    backgroundColor: "rgba(255, 255, 255, 0.9)",
-                    borderRadius: "50%",
-                    width: "30px",
-                    height: "30px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      backgroundColor: "rgba(255, 255, 255, 1)",
-                      transform: "translateY(-50%) scale(1.1)",
-                    },
-                  }}
-                >
-                  <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_right</Icon>
-                </MKBox>
+              {/* 오른쪽 화살표 */}
+              <MKBox
+                onClick={handleNextImage}
+                sx={{
+                  position: "absolute",
+                  top: "50%",
+                  right: "10px",
+                  transform: "translateY(-50%)",
+                  backgroundColor: "rgba(255, 255, 255, 0.9)",
+                  borderRadius: "50%",
+                  width: "30px",
+                  height: "30px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "rgba(255, 255, 255, 1)",
+                    transform: "translateY(-50%) scale(1.1)",
+                  },
+                }}
+              >
+                <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_right</Icon>
+              </MKBox>
 
-                {/* 이미지 인디케이터 */}
-                <MKBox
-                  sx={{
-                    position: "absolute",
-                    bottom: "10px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    display: "flex",
-                    gap: "8px",
-                  }}
-                >
-                  {sliceImages.map((_, index) => (
-                    <MKBox
-                      key={index}
-                      sx={{
-                        width: "8px",
-                        height: "8px",
-                        borderRadius: "50%",
-                        backgroundColor: index === currentImageIndex 
-                          ? "rgba(255, 255, 255, 1)" 
-                          : "rgba(255, 255, 255, 0.5)",
-                        transition: "all 0.3s ease",
-                      }}
-                    />
-                  ))}
-                </MKBox>
+              {/* 이미지 인디케이터 */}
+              <MKBox
+                sx={{
+                  position: "absolute",
+                  bottom: "10px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  display: "flex",
+                  gap: "8px",
+                }}
+              >
+                {sliceImages.map((_, index) => (
+                  <MKBox
+                    key={index}
+                    sx={{
+                      width: "8px",
+                      height: "8px",
+                      borderRadius: "50%",
+                      backgroundColor: index === currentImageIndex
+                        ? "rgba(255, 255, 255, 1)"
+                        : "rgba(255, 255, 255, 0.5)",
+                      transition: "all 0.3s ease",
+                    }}
+                  />
+                ))}
               </MKBox>
             </MKBox>
+          </MKBox>
         </MKBox>
       </MKBox>
 
@@ -1758,17 +2056,17 @@ function Presentation() {
         smartStoreUrl="https://smartstore.naver.com/geumdayeon"
       />
 
-             {/* 금다연 오시는 길 섹션 */}
+      {/* 금다연 오시는 길 섹션 */}
       <LocationInfo
         mapImage={howToComeImage}
         layout="desktop"
         showTitle={true}
       />
 
-       {/* Footer */}
-       <DefaultFooter />
-     </>
-   );
- }
+      {/* Footer */}
+      <DefaultFooter />
+    </>
+  );
+}
 
 export default Presentation;

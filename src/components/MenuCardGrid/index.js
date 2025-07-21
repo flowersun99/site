@@ -23,22 +23,6 @@ const menuItems = [
       "죽, 매실절임(특허받음), 수수부꾸미/약밥, 새우장(생김치+생굴), 칠절판, 연어 날치알 샐러드, 계절초무침, 약선신선로(특허받음), 홍어삼합, 생선회(생연어 등), 토란탕/메생이/꽃게탕, 한우 생고기, 가오리찜, 생선탕수, 궁중잡채, 전류(민어, 굴, 고기 등), 갈비찜, 조림류, 메로구이, 새우/야채튀김, 굴비, 식사",
   },
   {
-    title: "매화상",
-    subtitle: "Plum blossom table set",
-    description: "격조 높은 분위기를 선사",
-    image: secondImage,
-    menuList:
-      "죽, 매실절임(특허받음), 약선잡곡밥, 상추삼채 겉절이, 칠절판, 약선 생마청, 계절초무침, 양상치 연어 날치알쌈, 탕평채, 궁중잡채, 전류(민어, 굴, 고기 등), 어탕(민어 등)/메생이, 생선회(전복1개), 홍어삼합, 약선신선로(특허받음), 한우 낙지탕탕이, 우럭탕수, 조림류, 송이버섯마늘갈비, 새우, 야채튀김, 굴비, 식사",
-  },
-  {
-    title: "무궁화상",
-    subtitle: "Rose of sharon table set",
-    description: "금다연의 '격'이 보이는 상차림",
-    image: threeImage,
-    menuList:
-      "죽, 매실절임(특허받음), 약선잡곡밥, 상추삼채 겉절이, 칠절판, 약선 생마 산삼청, 계절초무침, 양상치 연어 날치알쌈, 탕평채, 궁중잡채, 전류(민어, 굴, 고기 등), 어탕(민어 등)/메생이, 생선회, 참치회, 홍어삼합, 랍스터, 약선신선로(특허받음), 한우 낙지탕탕이, 생마 유자청 곁들인 전복초, 대하찜, 해신탕, 활우럭탕수, 인삼, 새우튀김, 굴비, 식사",
-  },
-  {
     title: "모란상 B",
     subtitle: "Peony table set B",
     description: "고급스럽고 특별한 메뉴",
@@ -47,12 +31,28 @@ const menuItems = [
       "죽, 매실절임(특허받음), 수수부꾸미/약밥, 새우장(생김치+생굴), 칠절판, 연어 날치알 샐러드, 계절초무침(구체적), 약선신선로(특허받음), 홍어삼합, 생선회(연어, 랍스터), 토란탕/메생이/꽃게탕, 한우 생고기, 낙지, 생마 유자청 전복초/찜, 활우럭탕수, 궁중잡채, 전류(민어, 굴, 고기 등), 갈비찜, 조림류, 메로구이, 새우/야채튀김, 굴비, 식사",
   },
   {
+    title: "매화상",
+    subtitle: "Plum blossom table set",
+    description: "격조 높은 분위기를 선사",
+    image: secondImage,
+    menuList:
+      "죽, 매실절임(특허받음), 약선잡곡밥, 상추삼채 겉절이, 칠절판, 약선 생마청, 계절초무침, 양상치 연어 날치알쌈, 탕평채, 궁중잡채, 전류(민어, 굴, 고기 등), 어탕(민어 등)/메생이, 생선회(전복1개), 홍어삼합, 약선신선로(특허받음), 한우 낙지탕탕이, 우럭탕수, 조림류, 송이버섯마늘갈비, 새우, 야채튀김, 굴비, 식사",
+  },
+  {
     title: "연꽃상",
     subtitle: "Lotus table set",
     description: "상견례, 접대에서 가장 많이 찾는 상차림",
     image: fiveImage,
     menuList:
       "죽, 매실절임(특허받음), 약선잡곡밥, 상추삼채 겉절이, 칠절판, 약선 생마청, 계절초무침, 양상치 연어 날치알쌈, 탕평채, 궁중잡채, 전류(민어, 굴, 고기 등), 어탕(민어 등)/메생이, 생선회(전복1개), 홍어삼합, 약선신선로(특허받음), 한우 낙지탕탕이, 송이버섯마늘갈비, 생마 유자청 곁들인 전복초, 활우럭탕수, 인삼, 새우튀김, 굴비, 식사",
+  },
+  {
+    title: "무궁화상",
+    subtitle: "Rose of sharon table set",
+    description: "금다연의 '격'이 보이는 상차림",
+    image: threeImage,
+    menuList:
+      "죽, 매실절임(특허받음), 약선잡곡밥, 상추삼채 겉절이, 칠절판, 약선 생마 산삼청, 계절초무침, 양상치 연어 날치알쌈, 탕평채, 궁중잡채, 전류(민어, 굴, 고기 등), 어탕(민어 등)/메생이, 생선회, 참치회, 홍어삼합, 랍스터, 약선신선로(특허받음), 한우 낙지탕탕이, 생마 유자청 곁들인 전복초, 대하찜, 해신탕, 활우럭탕수, 인삼, 새우튀김, 굴비, 식사",
   },
   {
     title: "금다연상",
@@ -69,8 +69,6 @@ const MenuCard = ({ item }) => (
     <MKBox
       sx={{
         height: "100%",
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
         transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
         "&:hover": {
           transform: "translateY(-8px)",
@@ -82,76 +80,67 @@ const MenuCard = ({ item }) => (
         shadow: "lg",
       }}
     >
-      {/* 이미지 - 모바일에서는 상단에, 데스크톱에서는 우측에 */}
-      <MKBox
-        component="img"
-        src={item.image}
-        alt={item.title}
-        sx={{
-          width: { xs: "100%", md: "30%" },
-          height: { xs: "200px", md: "auto" },
-          objectFit: "cover",
-        }}
-      />
-
-      {/* 카드 내용 */}
-      <MKBox
-        sx={{
-          flexGrow: 1,
-          display: "flex",
-          flexDirection: "column",
-          p: 4,
-          width: { xs: "100%", md: "70%" },
-        }}
-      >
-        {/* 제목 */}
-        <MKTypography
-          variant="h5"
-          color="dark"
-          mb={1}
+      {/* 모바일 레이아웃 */}
+      <MKBox sx={{ display: { xs: "block", md: "none" } }}>
+        {/* 이미지 */}
+        <MKBox
+          component="img"
+          src={item.image}
+          alt={item.title}
           sx={{
-            fontSize: { xs: "1.1rem", md: "1.3rem" },
-            fontWeight: "bold",
+            width: "100%",
+            height: "200px",
+            objectFit: "cover",
           }}
-        >
-          {item.title}
-        </MKTypography>
+        />
 
-        {/* 영문 제목 */}
-        <MKTypography
-          variant="body2"
-          color="text"
-          mb={2}
-          sx={{
-            fontSize: { xs: "0.8rem", md: "0.9rem" },
-            opacity: 0.7,
-            fontStyle: "italic",
-          }}
-        >
-          {item.subtitle}
-        </MKTypography>
+        {/* 카드 내용 */}
+        <MKBox sx={{ p: 4 }}>
+          {/* 제목과 영문 제목 */}
+          <MKBox sx={{ display: "flex", alignItems: "center", mb: 2, gap: 1 }}>
+            <MKTypography
+              variant="h5"
+              color="dark"
+              sx={{
+                fontSize: "1.1rem",
+                fontWeight: "bold",
+              }}
+            >
+              {item.title}
+            </MKTypography>
+            <MKTypography
+              variant="body2"
+              color="text"
+              sx={{
+                fontSize: "0.8rem",
+                opacity: 0.7,
+                fontStyle: "italic",
+              }}
+            >
+              {item.subtitle}
+            </MKTypography>
+          </MKBox>
 
-        {/* 설명 */}
-        <MKTypography
-          variant="body1"
-          color="dark"
-          mb={3}
-          sx={{
-            fontSize: { xs: "0.9rem", md: "1rem" },
-            fontWeight: 500,
-            lineHeight: 1.4,
-          }}
-        >
-          {item.description}
-        </MKTypography>
+          {/* 설명 */}
+          <MKTypography
+            variant="body1"
+            color="dark"
+            mb={3}
+            sx={{
+              fontSize: "0.9rem",
+              fontWeight: 500,
+              lineHeight: 1.4,
+            }}
+          >
+            {item.description}
+          </MKTypography>
 
-        {/* 메뉴 목록 */}
-        <MKBox sx={{ flexGrow: 1 }}>
+          {/* 메뉴 목록 */}
           <MKTypography
             variant="body2"
             color="text"
             sx={{
-              fontSize: { xs: "0.75rem", md: "0.8rem" },
+              fontSize: "0.75rem",
               lineHeight: 1.5,
               opacity: 0.8,
             }}
@@ -159,6 +148,86 @@ const MenuCard = ({ item }) => (
             {item.menuList}
           </MKTypography>
         </MKBox>
+      </MKBox>
+
+      {/* PC 레이아웃 */}
+      <MKBox sx={{ display: { xs: "none", md: "flex" }, height: "100%" }}>
+        {/* 텍스트 영역 */}
+        <MKBox
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            p: 4,
+          }}
+        >
+          {/* 제목과 영문 제목 */}
+          <MKBox sx={{ display: "flex", alignItems: "center", mb: 2, gap: 1 }}>
+            <MKTypography
+              variant="h5"
+              color="dark"
+              sx={{
+                fontSize: "1.3rem",
+                fontWeight: "bold",
+              }}
+            >
+              {item.title}
+            </MKTypography>
+            <MKTypography
+              variant="body2"
+              color="text"
+              sx={{
+                fontSize: "0.9rem",
+                opacity: 0.7,
+                fontStyle: "italic",
+              }}
+            >
+              {item.subtitle}
+            </MKTypography>
+          </MKBox>
+
+          {/* 설명 */}
+          <MKTypography
+            variant="body1"
+            color="dark"
+            mb={3}
+            sx={{
+              fontSize: "1rem",
+              fontWeight: 500,
+              lineHeight: 1.4,
+            }}
+          >
+            {item.description}
+          </MKTypography>
+
+          {/* 메뉴 목록 */}
+          <MKTypography
+            variant="body2"
+            color="text"
+            sx={{
+              fontSize: "0.8rem",
+              lineHeight: 1.5,
+              opacity: 0.8,
+            }}
+          >
+            {item.menuList}
+          </MKTypography>
+        </MKBox>
+
+        {/* 이미지 */}
+        <MKBox
+          component="img"
+          src={item.image}
+          alt={item.title}
+          sx={{
+            width: "30%",
+            height: "130px",
+            objectFit: "cover",
+            alignSelf: "flex-start",
+            mt: 4,
+            mr: 4,
+          }}
+        />
       </MKBox>
     </MKBox>
   </Grid>
