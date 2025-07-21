@@ -9,6 +9,9 @@ import Icon from "@mui/material/Icon";
 // Custom components
 import GiftSetCard from "components/GiftSetCard";
 
+// Images
+import naverLogo from "assets/images/presentSet/naverlogo.png";
+
 function GiftSetSection({ 
   title = "명품 선물세트",
   subtitle = "특허 받은 약선 조리법 소중한 분에게 건강함을 선물하세요",
@@ -113,6 +116,18 @@ function GiftSetSection({
               },
             }}
           >
+            {/* 네이버 로고 */}
+            <MKBox
+              component="img"
+              src={naverLogo}
+              alt="네이버"
+              sx={{
+                width: "24px",
+                height: "24px",
+                mr: 2,
+                objectFit: "contain",
+              }}
+            />
             <MKTypography
               variant="body1"
               sx={{
