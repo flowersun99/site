@@ -162,7 +162,7 @@ function LocationInfo({
         
 
         {/* 네비게이션 버튼들 */}
-        <MKBox sx={{ mb: 4 }}>
+        <MKBox sx={{ mb: 6 }}>
           <MKTypography
             variant="h5"
             color="dark"
@@ -240,6 +240,7 @@ function LocationInfo({
             borderRadius: "12px",
             bgColor: "#f8f9fa",
             border: "1px solid #e9ecef",
+            mt: 4,
           }}
         >
           <MKTypography
@@ -255,23 +256,24 @@ function LocationInfo({
           </MKTypography>
           {parkingInfo.map((parking, index) => (
             <MKBox key={index} sx={{ mb: 3 }}>
-              <MKBox display="flex" alignItems="center" mb={1}>
-                <Icon sx={{ color: parking.iconColor, mr: 1, fontSize: "1.2rem" }}>
-                  local_parking
-                </Icon>
-                <MKTypography
-                  variant="h6"
-                  color="dark"
-                  sx={{
-                    fontWeight: "bold",
-                    fontSize: "1rem",
-                    flexGrow: 1,
-                  }}
-                >
-                  {parking.title}
-                </MKTypography>
+              <MKBox sx={{ mb: 2 }}>
+                <MKBox display="flex" alignItems="center" mb={1}>
+                  <Icon sx={{ color: parking.iconColor, mr: 1, fontSize: "1.2rem" }}>
+                    local_parking
+                  </Icon>
+                  <MKTypography
+                    variant="h6"
+                    color="dark"
+                    sx={{
+                      fontWeight: "bold",
+                      fontSize: "1rem",
+                    }}
+                  >
+                    {parking.title}
+                  </MKTypography>
+                </MKBox>
                 {/* 주차장 링크 버튼들 */}
-                <MKBox sx={{ display: "flex", gap: 1 }}>
+                <MKBox sx={{ display: "flex", gap: 1, ml: 3 }}>
                   <MKBox
                     component="a"
                     href={parking.links.naver}
@@ -347,6 +349,7 @@ function LocationInfo({
                   fontSize: "0.9rem",
                   lineHeight: 1.6,
                   ml: 3,
+                  mt: 1,
                 }}
               >
                 {parking.description}
@@ -539,9 +542,11 @@ function LocationInfo({
         <MKBox>
           <MKTypography
             variant="h5"
+            textAlign="center"
             color="dark"
-            mb={3}
+            mb={4}
             sx={{
+              mt: 14,
               fontSize: { xs: "1.2rem", md: "1.5rem" },
               fontWeight: "bold",
             }}
