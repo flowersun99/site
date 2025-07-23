@@ -38,6 +38,7 @@ Coded by www.creative-tim.com
 
 import AboutUs from "pages/LandingPages/AboutUs";
 import Location from "pages/LandingPages/Location";
+import Menu from "pages/LandingPages/Menu";
 import GiftSet from "pages/LandingPages/GiftSet";
 import Review from "pages/LandingPages/Review";
 
@@ -55,6 +56,13 @@ const routes = [
     key: "location",
     route: "/location",
     component: Location,
+  },
+  {
+    type: "route",
+    name: "메뉴",
+    key: "menu",
+    route: "/menu",
+    component: Menu,
   },
   {
     type: "route",

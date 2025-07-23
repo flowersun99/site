@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -7,10 +8,11 @@ import Icon from "@mui/material/Icon";
 
 function MobileMenuOverlay({ isOpen, onClose }) {
   const menuItems = [
-    { name: "금다연 이야기 Story", href: "/about" },
-    { name: "위치 Location", href: "/location" },
-    { name: "명품 선물세트 Premium gift set", href: "/gift-set" },
-    { name: "후기 Review", href: "/review" },
+    { name: "금다연 이야기 Story", path: "/about" },
+    { name: "위치 Location", path: "/location" },
+    { name: "메뉴 Menu", path: "/menu" },
+    { name: "명품 선물세트 Premium gift set", path: "/gift-set" },
+    { name: "후기 Review", path: "/review" },
   ];
 
   if (!isOpen) return null;
@@ -67,8 +69,8 @@ function MobileMenuOverlay({ isOpen, onClose }) {
         {menuItems.map((item, index) => (
           <MKBox
             key={index}
-            component="a"
-            href={item.href}
+            component={Link}
+            to={item.path}
             onClick={onClose}
             sx={{
               display: "block",

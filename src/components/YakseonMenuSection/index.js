@@ -7,9 +7,9 @@ import YakseonMenuItem from "components/YakseonMenuItem";
 
 function YakseonMenuSection({ title, menuItems }) {
   const containerStyles = {
-    padding: { xs: "40px 30px", md: "40px 50px" },
-    maxWidth: "1500px",
-    width: "85%",
+    padding: { xs: "40px 30px", md: "20px 15px" },
+    maxWidth: { xs: "1500px", md: "1400px" },
+    width: { xs: "85%", md: "90%" },
     zIndex: 2,
     borderRadius: "12px",
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -24,15 +24,15 @@ function YakseonMenuSection({ title, menuItems }) {
         variant="h2"
         color="white"
         textAlign="center"
-        mb={4}
-        sx={{ fontSize: { xs: "1.7rem", md: "2rem" } }}
+        mb={3}
+        sx={{ fontSize: { xs: "1.7rem", md: "1.6rem" } }}
       >
         {title}
       </MKTypography>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         {menuItems.map((item) => (
-          <Grid item xs={12} md={6} key={item.id}>
+          <Grid item xs={12} md={3} key={item.id}>
             <YakseonMenuItem item={item} />
           </Grid>
         ))}

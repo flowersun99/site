@@ -416,10 +416,10 @@ function Presentation() {
           <Grid container spacing={4} justifyContent="center">
             {/* 첫 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography 
-                variant="h3" 
-                color="white" 
-                fontWeight="bold" 
+              <MKTypography
+                variant="h3"
+                color="white"
+                fontWeight="bold"
                 mb={1}
                 sx={{
                   fontSize: { xs: "1.5rem", md: "2.25rem" }
@@ -427,9 +427,9 @@ function Presentation() {
               >
                 약선 한정식
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="white" 
+              <MKTypography
+                variant="body1"
+                color="white"
                 opacity={0.9}
                 sx={{
                   fontSize: { xs: "0.875rem", md: "1rem" }
@@ -441,10 +441,10 @@ function Presentation() {
 
             {/* 두 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography 
-                variant="h3" 
-                color="white" 
-                fontWeight="bold" 
+              <MKTypography
+                variant="h3"
+                color="white"
+                fontWeight="bold"
                 mb={1}
                 sx={{
                   fontSize: { xs: "1.5rem", md: "2.25rem" }
@@ -452,9 +452,9 @@ function Presentation() {
               >
                 최대 60명 수용
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="white" 
+              <MKTypography
+                variant="body1"
+                color="white"
                 opacity={0.9}
                 sx={{
                   fontSize: { xs: "0.875rem", md: "1rem" }
@@ -466,10 +466,10 @@ function Presentation() {
 
             {/* 세 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography 
-                variant="h3" 
-                color="white" 
-                fontWeight="bold" 
+              <MKTypography
+                variant="h3"
+                color="white"
+                fontWeight="bold"
                 mb={1}
                 sx={{
                   fontSize: { xs: "1.5rem", md: "2.25rem" }
@@ -477,9 +477,9 @@ function Presentation() {
               >
                 명품 선물세트
               </MKTypography>
-              <MKTypography 
-                variant="body1" 
-                color="white" 
+              <MKTypography
+                variant="body1"
+                color="white"
                 opacity={0.9}
                 sx={{
                   fontSize: { xs: "0.875rem", md: "1rem" }
@@ -559,7 +559,7 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.75rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all" // 단어 단위로 줄바꿈 방지
@@ -571,7 +571,7 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.7rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all"
@@ -598,7 +598,7 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.75rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all"
@@ -610,7 +610,7 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.7rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all"
@@ -637,7 +637,7 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.75rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all"
@@ -649,7 +649,7 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ 
+                  sx={{
                     fontSize: { xs: "0.7rem", md: "1rem" },
                     lineHeight: { xs: "1.1", md: "1.2" },
                     wordBreak: "keep-all"
@@ -843,17 +843,17 @@ function Presentation() {
         />
 
         {/* 모바일용 메뉴 섹션 */}
-        <MenuSection 
-          title="한정식 메뉴" 
-          menuItems={menuItems} 
-          isMobile={true} 
+        <MenuSection
+          title="한정식 메뉴"
+          menuItems={menuItems}
+          isMobile={true}
         />
 
         {/* PC용 메뉴 섹션 */}
-        <MenuSection 
-          title="한정식 메뉴" 
-          menuItems={menuItems} 
-          isMobile={false} 
+        <MenuSection
+          title="한정식 메뉴"
+          menuItems={menuItems}
+          isMobile={false}
         />
       </MKBox>
 
@@ -904,9 +904,9 @@ function Presentation() {
 
           </MKBox>
 
-                              <MenuCardGrid />
+          <MenuCardGrid />
         </MKBox>
-        
+
         {/* 메뉴 변경 안내 */}
         <MKBox sx={{ mt: 6 }}>
           <MKTypography
@@ -938,12 +938,22 @@ function Presentation() {
           justifyContent: "center",
           position: "relative",
           py: { xs: 4, md: 0 },
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: { xs: "transparent", md: "rgba(0, 0, 0, 0.5)" },
+          },
         }}
       >
         {/* 약선보양 메뉴 섹션 */}
-        <YakseonMenuSection 
-          title="약선보양 단품 메뉴" 
-          menuItems={yakseonMenuItems} 
+        <YakseonMenuSection
+          title="약선보양 단품 메뉴"
+          menuItems={yakseonMenuItems}
         />
       </MKBox>
 
@@ -1352,7 +1362,7 @@ function Presentation() {
                   textAlign: "center",
                 }}
               >
-                비즈니스 PT, 피로연 돌잔치 등에 
+                비즈니스 PT, 피로연 돌잔치 등에
                 <br />많이들 찾아 주십니다.
                 <br />
                 (빔프로젝터, 무선마이크 사용 가능 합니다.)
