@@ -7,19 +7,16 @@ import YakseonMenuItem from "components/YakseonMenuItem";
 
 function YakseonMenuSection({ title, menuItems }) {
   const containerStyles = {
-    padding: { xs: "40px 30px", md: "50px 60px" },
-    maxWidth: "1200px",
-    width: "90%",
+    padding: { xs: "40px 30px", md: "40px 50px" },
+    maxWidth: "1500px",
+    width: "85%",
     zIndex: 2,
     borderRadius: "12px",
     backgroundColor: "rgba(0, 0, 0, 0.8)",
     margin: { xs: "20px 0", md: 0 },
   };
 
-  const titleStyles = {
-    fontSize: { xs: "1.2rem", md: "2rem" },
-    fontWeight: "bold",
-  };
+
 
   return (
     <MKBox sx={containerStyles}>
@@ -28,7 +25,7 @@ function YakseonMenuSection({ title, menuItems }) {
         color="white"
         textAlign="center"
         mb={4}
-        style={titleStyles}
+        sx={{ fontSize: { xs: "1.7rem", md: "2rem" } }}
       >
         {title}
       </MKTypography>
