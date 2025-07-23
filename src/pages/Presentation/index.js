@@ -1454,7 +1454,7 @@ function Presentation() {
         showTitle={true}
         showSubtitle={false}
         showSmartStoreButton={true}
-        smartStoreUrl="https://smartstore.naver.com/geumdayeon"
+        smartStoreUrl="https://smartstore.naver.com/gdycokr?NaPm=ct%3Dmdcghdrw%7Cci%3Dshopn%7Ctr%3Dnslsl%7Chk%3Dda31df3d77ca393e48fddca66c3cc7e941aa6df5%7Ctrx%3Dundefined"
       />
 
       {/* 금다연 오시는 길 섹션 */}
