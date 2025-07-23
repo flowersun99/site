@@ -375,7 +375,7 @@ function Presentation() {
             variant="h1"
             color="white"
             sx={{
-              fontSize: { xs: "1.8rem", md: "3rem" },
+              fontSize: { xs: "2rem", md: "3rem" },
               fontWeight: "bold",
               textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
               mb: { xs: 1, md: 2 },
@@ -416,30 +416,75 @@ function Presentation() {
           <Grid container spacing={4} justifyContent="center">
             {/* 첫 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography variant="h3" color="white" fontWeight="bold" mb={1}>
+              <MKTypography 
+                variant="h3" 
+                color="white" 
+                fontWeight="bold" 
+                mb={1}
+                sx={{
+                  fontSize: { xs: "1.5rem", md: "2.25rem" }
+                }}
+              >
                 약선 한정식
               </MKTypography>
-              <MKTypography variant="body1" color="white" opacity={0.9}>
-                특허 받은 웰빙 식단
+              <MKTypography 
+                variant="body1" 
+                color="white" 
+                opacity={0.9}
+                sx={{
+                  fontSize: { xs: "0.875rem", md: "1rem" }
+                }}
+              >
+                특허받은 웰빙 메뉴
               </MKTypography>
             </Grid>
 
             {/* 두 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography variant="h3" color="white" fontWeight="bold" mb={1}>
+              <MKTypography 
+                variant="h3" 
+                color="white" 
+                fontWeight="bold" 
+                mb={1}
+                sx={{
+                  fontSize: { xs: "1.5rem", md: "2.25rem" }
+                }}
+              >
                 최대 60명 수용
               </MKTypography>
-              <MKTypography variant="body1" color="white" opacity={0.9}>
+              <MKTypography 
+                variant="body1" 
+                color="white" 
+                opacity={0.9}
+                sx={{
+                  fontSize: { xs: "0.875rem", md: "1rem" }
+                }}
+              >
                 상견례, 피로연, 돌잔치 등
               </MKTypography>
             </Grid>
 
             {/* 세 번째 컬럼 */}
             <Grid item xs={12} md={4} textAlign="center">
-              <MKTypography variant="h3" color="white" fontWeight="bold" mb={1}>
+              <MKTypography 
+                variant="h3" 
+                color="white" 
+                fontWeight="bold" 
+                mb={1}
+                sx={{
+                  fontSize: { xs: "1.5rem", md: "2.25rem" }
+                }}
+              >
                 명품 선물세트
               </MKTypography>
-              <MKTypography variant="body1" color="white" opacity={0.9}>
+              <MKTypography 
+                variant="body1" 
+                color="white" 
+                opacity={0.9}
+                sx={{
+                  fontSize: { xs: "0.875rem", md: "1rem" }
+                }}
+              >
                 보리굴비, 고추장굴비 등
               </MKTypography>
             </Grid>
@@ -493,18 +538,18 @@ function Presentation() {
             zIndex: 2,
             width: "100%",
             maxWidth: "1200px",
-            px: { xs: 2, md: 4 },
+            px: { xs: 1, md: 4 }, // 모바일에서 패딩 줄임
             display: { xs: "block", md: "none" },
           }}
         >
-          <Grid container spacing={{ xs: 2, md: 4 }} justifyContent="center">
+          <Grid container spacing={{ xs: 1, md: 4 }} justifyContent="center">
             {/* 첫 번째 컬럼 */}
             <Grid item xs={4} sm={4} textAlign="center">
               <MKBox
                 sx={{
                   backgroundColor: { xs: "transparent", md: "rgba(255, 255, 255, 0.1)" },
                   borderRadius: { xs: 0, md: "12px" },
-                  padding: { xs: "12px 16px", md: "30px 20px" },
+                  padding: { xs: "8px 4px", md: "30px 20px" }, // 모바일에서 패딩 줄임
                   backdropFilter: { xs: "none", md: "blur(10px)" },
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
@@ -514,7 +559,11 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.75rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all" // 단어 단위로 줄바꿈 방지
+                  }}
                 >
                   약선 한정식
                 </MKTypography>
@@ -522,9 +571,13 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.7rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all"
+                  }}
                 >
-                  특허 받은 웰빙 식단
+                  특허받은 웰빙 메뉴
                 </MKTypography>
               </MKBox>
             </Grid>
@@ -535,7 +588,7 @@ function Presentation() {
                 sx={{
                   backgroundColor: { xs: "transparent", md: "rgba(255, 255, 255, 0.1)" },
                   borderRadius: { xs: 0, md: "12px" },
-                  padding: { xs: "12px 16px", md: "30px 20px" },
+                  padding: { xs: "8px 4px", md: "30px 20px" },
                   backdropFilter: { xs: "none", md: "blur(10px)" },
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
@@ -545,7 +598,11 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.75rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all"
+                  }}
                 >
                   최대 60명 수용
                 </MKTypography>
@@ -553,9 +610,13 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.7rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all"
+                  }}
                 >
-                  상견례, 피로연, 돌잔치 등
+                  상견례,피로연,돌잔치 등
                 </MKTypography>
               </MKBox>
             </Grid>
@@ -566,7 +627,7 @@ function Presentation() {
                 sx={{
                   backgroundColor: { xs: "transparent", md: "rgba(255, 255, 255, 0.1)" },
                   borderRadius: { xs: 0, md: "12px" },
-                  padding: { xs: "12px 16px", md: "30px 20px" },
+                  padding: { xs: "8px 4px", md: "30px 20px" },
                   backdropFilter: { xs: "none", md: "blur(10px)" },
                   border: { xs: "none", md: "1px solid rgba(255, 255, 255, 0.2)" },
                 }}
@@ -576,7 +637,11 @@ function Presentation() {
                   color="white"
                   fontWeight="bold"
                   mb={1}
-                  sx={{ fontSize: { xs: "1.3rem", md: "2rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.75rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all"
+                  }}
                 >
                   명품 선물세트
                 </MKTypography>
@@ -584,7 +649,11 @@ function Presentation() {
                   variant="body1"
                   color="white"
                   opacity={0.9}
-                  sx={{ fontSize: { xs: "0.85rem", md: "1rem" } }}
+                  sx={{ 
+                    fontSize: { xs: "0.7rem", md: "1rem" },
+                    lineHeight: { xs: "1.1", md: "1.2" },
+                    wordBreak: "keep-all"
+                  }}
                 >
                   보리굴비, 고추장굴비 등
                 </MKTypography>
@@ -721,7 +790,7 @@ function Presentation() {
                     mb: { xs: 1, md: 0.5 },
                   }}
                 >
-                  영업시간 : 매일 11:30 - 22:00(15:00 - 17:00 브레이크타임)
+                  영업시간 : 매일 11:30 - 22:00<br />(15:00 - 17:00 브레이크타임)
                 </MKTypography>
               </MKBox>
 
@@ -735,7 +804,7 @@ function Presentation() {
                     mb: { xs: 1, md: 0.5 },
                   }}
                 >
-                  예약전화번호 : 062-374-1000
+                  예약전화번호 <br /> 062-374-1000
                 </MKTypography>
               </MKBox>
             </MKBox>
@@ -1283,7 +1352,10 @@ function Presentation() {
                   textAlign: "center",
                 }}
               >
-                빔프로젝터, 무선마이크 사용 가능 합니다.
+                비즈니스 PT, 피로연 돌잔치 등에 
+                <br />많이들 찾아 주십니다.
+                <br />
+                (빔프로젝터, 무선마이크 사용 가능 합니다.)
               </MKTypography>
               <MKTypography
                 variant="body1"
@@ -1295,16 +1367,7 @@ function Presentation() {
                 }}
               >
                 고품격 상견례, 중요한 미팅
-              </MKTypography>
-              <MKTypography
-                variant="body1"
-                color="white"
-                sx={{
-                  fontSize: { xs: "0.8rem", md: "0.9rem" },
-                  lineHeight: 1.6,
-                  textAlign: "center",
-                }}
-              >
+                <br />
                 회갑연, 돌잔치 등 행사에 많이들 찾아 주십니다.
               </MKTypography>
               <MKTypography
@@ -1317,16 +1380,7 @@ function Presentation() {
                 }}
               >
                 맛과 멋이 있는 금다연에서
-              </MKTypography>
-              <MKTypography
-                variant="body1"
-                color="white"
-                sx={{
-                  fontSize: { xs: "0.8rem", md: "0.9rem" },
-                  lineHeight: 1.6,
-                  textAlign: "center",
-                }}
-              >
+                <br />
                 격조 있고 품격 있는 시간을 보내세요.
               </MKTypography>
             </MKBox>
