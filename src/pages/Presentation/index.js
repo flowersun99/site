@@ -517,7 +517,7 @@ function Presentation() {
             },
           }}
         >
-          <Icon sx={{ color: "white" }}>phone</Icon>
+          <Icon sx={{ color: "white !important", "& *": { color: "white !important" } }}>phone</Icon>
           <MKTypography
             variant="body1"
             color="white"
@@ -528,7 +528,7 @@ function Presentation() {
           >
             예약문의
           </MKTypography>
-          <Icon sx={{ color: "white" }}>arrow_forward</Icon>
+          <Icon sx={{ color: "white !important", "& *": { color: "white !important" } }}>arrow_forward</Icon>
         </MKBox>
 
         {/* 정보 카드들 */}

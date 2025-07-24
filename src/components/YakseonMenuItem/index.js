@@ -8,18 +8,18 @@ function YakseonMenuItem({ item }) {
     container: {
       mb: 4,
       borderRadius: "12px",
-      padding: { xs: "20px", md: "20px" },
+      padding: { xs: "20px", sm: "15px", md: "20px" },
       border: "1px solid rgba(255, 255, 255, 0.2)",
-      height: { xs: "auto", md: "320px" },
+      height: { xs: "auto", sm: "auto", md: "320px" },
       display: "flex",
       flexDirection: "column",
     },
     imageContainer: {
       width: "100%",
-      height: { xs: "200px", md: "140px" },
+      height: { xs: "200px", sm: "180px", md: "140px" },
       borderRadius: "8px",
       overflow: "hidden",
-      mb: { xs: 2, md: 1 },
+      mb: { xs: 2, sm: 1.5, md: 1 },
       flexShrink: 0,
     },
     image: {
@@ -39,27 +39,27 @@ function YakseonMenuItem({ item }) {
       flexDirection: "column",
       alignItems: "center",
       textAlign: "center",
-      mb: { xs: 1, md: 0.5 },
+      mb: { xs: 1, sm: 0.75, md: 0.5 },
     },
     name: {
-      fontSize: { xs: "1.3rem", md: "1.2rem" },
+      fontSize: { xs: "1.3rem", sm: "1.1rem", md: "1.2rem" },
       mb: 0.5,
     },
     englishName: {
-      fontSize: { xs: "0.9rem", md: "0.9rem" },
+      fontSize: { xs: "0.9rem", sm: "0.8rem", md: "0.9rem" },
     },
     divider: {
       width: "100%",
       height: "1px",
       background: "repeating-linear-gradient(to right, white 0, white 4px, transparent 4px, transparent 8px)",
-      mb: { xs: 1, md: 0.5 },
+      mb: { xs: 1, sm: 0.75, md: 0.5 },
     },
     price: {
-      fontSize: { xs: "1.2rem", md: "1.1rem" },
-      mb: { xs: 1, md: 0.5 },
+      fontSize: { xs: "1.2rem", sm: "1rem", md: "1.1rem" },
+      mb: { xs: 1, sm: 0.75, md: 0.5 },
     },
     description: {
-      fontSize: { xs: "0.9rem", md: "0.9rem" },
+      fontSize: { xs: "0.9rem", sm: "0.8rem", md: "0.9rem" },
       opacity: 0.8,
     },
   };
