@@ -21,7 +21,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 // Images
-import blacklogo from "assets/images/blacklogo.png";
+import blacklogo from "assets/images/logo.png";
 
 function DefaultFooter() {
   return (
@@ -54,7 +54,6 @@ function DefaultFooter() {
             height: "60px",
             width: "auto",
             objectFit: "contain",
-            filter: "brightness(0) invert(1)", // 로고를 흰색으로 변경
           }}
         />
 
@@ -106,7 +105,7 @@ function DefaultFooter() {
           sx={{
             display: "flex",
             flexDirection: "column",
-            alignItems: "flex-start",
+            alignItems: "center",
             gap: 1,
             width: "100%",
           }}
@@ -114,6 +113,7 @@ function DefaultFooter() {
           <MKTypography
             variant="body2"
             color="white"
+            textAlign="center"
             sx={{
               fontSize: "0.8rem",
               opacity: 0.8,

@@ -21,70 +21,90 @@ import MKTypography from "components/MKTypography";
 // Custom components
 import PageLayout from "components/PageLayout";
 import HeroSection from "components/HeroSection";
-import MenuSection from "components/MenuSection";
 
 // Menu images
 import menu1 from "assets/images/mobile_menu/menu1.jpg";
-import chalim3 from "assets/images/chalim3.png";
 import lunchmenu1 from "assets/images/lunchmenu/lunchmenu1.jpg";
 import lunchmenu2 from "assets/images/lunchmenu/lunchmenu2.jpg";
 import lunchmenu3 from "assets/images/lunchmenu/lunchmenu3.png";
 
 // Menu data
-import { menuItems } from "data/menuData";
+// import { menuItems } from "data/menuData";
+import MenuCardGrid from "components/MenuCardGrid";
+
 
 function Menu() {
   return (
     <PageLayout>
       <HeroSection
         image={menu1}
-        title="메뉴"
-        subtitle="금다연만의 특별한 한정식 메뉴를 만나보세요"
       />
 
-      {/* 모바일용 메뉴 섹션 */}
+      {/* 메뉴 카드 섹션 */}
       <MKBox
+        component="section"
+        py={12}
+        px={1}
         sx={{
-          width: "100%",
-          height: { xs: "auto", md: "700px" },
-          minHeight: { xs: "100vh", md: "700px" },
-          backgroundImage: `url(${chalim3})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
+          backgroundColor: "#f8f9fa",
+          minHeight: "100vh",
         }}
       >
-        {/* PC용 전체 배경 오버레이 */}
         <MKBox
+          variant="contained"
+          bgColor="white"
+          borderRadius="xl"
+          shadow="xl"
           sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            zIndex: 1,
-            display: { xs: "none", md: "block" },
+            maxWidth: "100%",
+            margin: "0 auto",
+            p: 4,
           }}
-        />
+        >
+          {/* 제목 섹션 */}
+          <MKBox textAlign="center" mb={6}>
+            <MKTypography
+              variant="h2"
+              color="dark"
+              mb={2}
+              sx={{
+                fontSize: { xs: "2rem", md: "3rem" },
+                fontWeight: "bold",
+              }}
+            >
+              메뉴 설명
+            </MKTypography>
+            <MKTypography
+              variant="h5"
+              color="text"
+              sx={{
+                fontSize: { xs: "1rem", md: "1.2rem" },
+                opacity: 0.8,
+              }}
+            >
+              전라도 광주 명품 한정식의 정석 <br /> 건강하고 든든한 점심 특선까지
+            </MKTypography>
 
-        {/* 모바일용 메뉴 섹션 */}
-        <MenuSection
-          title="한정식 메뉴"
-          menuItems={menuItems}
-          isMobile={true}
-        />
+          </MKBox>
 
-        {/* PC용 메뉴 섹션 */}
-        <MenuSection
-          title="한정식 메뉴"
-          menuItems={menuItems}
-          isMobile={false}
-        />
+          <MenuCardGrid />
+        </MKBox>
+
+                {/* 메뉴 변경 안내 */}
+        <MKBox sx={{ mt: 6 }}>
+          <MKTypography
+            variant="body2"
+            color="text"
+            textAlign="center"
+            sx={{
+              fontSize: "0.9rem",
+              opacity: 0.8,
+            }}
+          >
+            *메뉴는 구매사정과 계절적 특성에따라 변경될수 있습니다
+          </MKTypography>
+        </MKBox>
+
       </MKBox>
 
       {/* 모바일 점심 특선 메뉴 섹션 */}
@@ -196,71 +216,174 @@ function Menu() {
                 />
               </MKBox>
               <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
-                28,000원
+                20,000원
               </MKTypography>
             </MKBox>
 
-                         {/* 활우럭탕수 */}
-             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-               <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
-                 활우럭탕수
-               </MKTypography>
-               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
-                 <MKBox
-                   sx={{
-                     flex: 1,
-                     height: "1px",
-                     background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
-                   }}
-                 />
-               </MKBox>
-               <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
-                 28,000원
-               </MKTypography>
-             </MKBox>
-           </MKBox>
+            {/* 속풀이 전복 해물탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                속풀이 전복 해물탕
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                20,000원
+              </MKTypography>
+            </MKBox>
 
-           {/* 점심 메뉴 이미지들 */}
-           <MKBox sx={{ mt: 4 }}>
-             <MKBox
-               component="img"
-               src={lunchmenu1}
-               alt="점심 메뉴 1"
-               sx={{
-                 width: "100%",
-                 height: "200px",
-                 objectFit: "cover",
-                 borderRadius: "8px",
-                 mb: 2,
-               }}
-             />
-             <MKBox
-               component="img"
-               src={lunchmenu2}
-               alt="점심 메뉴 2"
-               sx={{
-                 width: "100%",
-                 height: "200px",
-                 objectFit: "cover",
-                 borderRadius: "8px",
-                 mb: 2,
-               }}
-             />
-             <MKBox
-               component="img"
-               src={lunchmenu3}
-               alt="점심 메뉴 3"
-               sx={{
-                 width: "100%",
-                 height: "200px",
-                 objectFit: "cover",
-                 borderRadius: "8px",
-                 mb: 2,
-               }}
-             />
-           </MKBox>
-         </MKBox>
-       </MKBox>
+            {/* 연포탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                연포탕
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                싯가
+              </MKTypography>
+            </MKBox>
+
+            {/* 능이버섯 전복 삼계탕 */}
+            <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                능이버섯 전복 삼계탕(계절메뉴)
+              </MKTypography>
+              <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                <MKBox
+                  sx={{
+                    flex: 1,
+                    height: "1px",
+                    background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                  }}
+                />
+              </MKBox>
+              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+                25,000원
+              </MKTypography>
+            </MKBox>
+
+            {/* 금다연 점심특선 */}
+            <MKBox sx={{ mb: 2 }}>
+              <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+                  금다연 점심특선
+                </MKTypography>
+              </MKBox>
+              <MKBox sx={{ pl: 2 }}>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    2인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    56,000원
+                  </MKTypography>
+                </MKBox>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    3인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    69,000원
+                  </MKTypography>
+                </MKBox>
+                <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                    4인
+                  </MKTypography>
+                  <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
+                    <MKBox
+                      sx={{
+                        flex: 1,
+                        height: "1px",
+                        background: "repeating-linear-gradient(to right, #000 0, #000 2px, transparent 2px, transparent 4px)",
+                      }}
+                    />
+                  </MKBox>
+                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                    84,000원
+                  </MKTypography>
+                </MKBox>
+              </MKBox>
+            </MKBox>
+          </MKBox>
+
+          {/* 음식 이미지들 */}
+          <MKBox
+            sx={{
+              display: "flex",
+              gap: 2,
+              justifyContent: "center",
+            }}
+          >
+            <MKBox
+              component="img"
+              src={lunchmenu3}
+              alt="음식 이미지 1"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+            <MKBox
+              component="img"
+              src={lunchmenu2}
+              alt="음식 이미지 2"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+            <MKBox
+              component="img"
+              src={lunchmenu1}
+              alt="음식 이미지 3"
+              sx={{
+                width: "30%",
+                height: "80px",
+                objectFit: "cover",
+                borderRadius: "8px",
+              }}
+            />
+          </MKBox>
+        </MKBox>
+      </MKBox>
     </PageLayout>
   );
 }
