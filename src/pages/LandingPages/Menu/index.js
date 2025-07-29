@@ -107,20 +107,19 @@ function Menu() {
 
       </MKBox>
 
-      {/* 모바일 점심 특선 메뉴 섹션 */}
+      {/* 점심 특선 메뉴 섹션 */}
       <MKBox
         sx={{
           width: "100%",
-          display: { xs: "block", md: "none" },
           backgroundColor: "white",
           py: 4,
         }}
       >
         <MKBox
           sx={{
-            maxWidth: "600px",
+            maxWidth: { xs: "600px", md: "800px" },
             margin: "0 auto",
-            px: 2,
+            px: { xs: 2, md: 4 },
           }}
         >
           {/* 제목 */}
@@ -130,7 +129,7 @@ function Menu() {
             textAlign="center"
             mb={2}
             sx={{
-              fontSize: "1.8rem",
+              fontSize: { xs: "1.8rem", md: "2.5rem" },
               fontWeight: "bold",
             }}
           >
@@ -154,7 +153,7 @@ function Menu() {
             textAlign="center"
             mb={4}
             sx={{
-              fontSize: "0.9rem",
+              fontSize: { xs: "0.9rem", md: "1.1rem" },
               opacity: 0.8,
             }}
           >
@@ -165,7 +164,7 @@ function Menu() {
           <MKBox sx={{ mb: 4 }}>
             {/* 특 굴비(부세)정식 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 특 굴비(부세)정식
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -177,14 +176,14 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 26,000원
               </MKTypography>
             </MKBox>
 
             {/* 굴비(부세)정식 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 굴비(부세)정식
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -196,14 +195,14 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 23,000원
               </MKTypography>
             </MKBox>
 
             {/* 활우럭 지리 / 매운탕 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 활우럭 지리 / 매운탕
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -215,14 +214,14 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 20,000원
               </MKTypography>
             </MKBox>
 
             {/* 속풀이 전복 해물탕 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 속풀이 전복 해물탕
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -234,14 +233,14 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 20,000원
               </MKTypography>
             </MKBox>
 
             {/* 연포탕 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 연포탕
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -253,14 +252,14 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 싯가
               </MKTypography>
             </MKBox>
 
             {/* 능이버섯 전복 삼계탕 */}
             <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "500" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "500" }}>
                 능이버섯 전복 삼계탕(계절메뉴)
               </MKTypography>
               <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -272,7 +271,7 @@ function Menu() {
                   }}
                 />
               </MKBox>
-              <MKTypography variant="body1" sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+              <MKTypography variant="body1" sx={{ fontSize: { xs: "1rem", md: "1.2rem" }, fontWeight: "bold" }}>
                 25,000원
               </MKTypography>
             </MKBox>
@@ -286,7 +285,7 @@ function Menu() {
               </MKBox>
               <MKBox sx={{ pl: 2 }}>
                 <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" } }}>
                     2인
                   </MKTypography>
                   <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -298,12 +297,12 @@ function Menu() {
                       }}
                     />
                   </MKBox>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" }, fontWeight: "bold" }}>
                     56,000원
                   </MKTypography>
                 </MKBox>
                 <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 1 }}>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" } }}>
                     3인
                   </MKTypography>
                   <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -315,12 +314,12 @@ function Menu() {
                       }}
                     />
                   </MKBox>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" }, fontWeight: "bold" }}>
                     69,000원
                   </MKTypography>
                 </MKBox>
                 <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" } }}>
                     4인
                   </MKTypography>
                   <MKBox sx={{ display: "flex", alignItems: "center", flex: 1, mx: 2 }}>
@@ -332,7 +331,7 @@ function Menu() {
                       }}
                     />
                   </MKBox>
-                  <MKTypography variant="body2" sx={{ fontSize: "0.9rem", fontWeight: "bold" }}>
+                  <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" }, fontWeight: "bold" }}>
                     84,000원
                   </MKTypography>
                 </MKBox>

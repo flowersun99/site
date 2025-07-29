@@ -279,7 +279,7 @@ function AboutUs() {
           sx={{
             position: "relative",
             width: "100%",
-            height: "450px",
+            height: { xs: "450px", md: "250px" },
             overflow: "hidden",
           }}
         >
@@ -289,10 +289,10 @@ function AboutUs() {
             alt="금다연 이야기 1"
             sx={{
               width: "100%",
-              height: "600px",
+              height: { xs: "600px", md: "300px" },
               objectFit: "cover",
               objectPosition: "center",
-              transform: "translateY(-20%)",
+              transform: { xs: "translateY(-20%)", md: "translateY(-10%)" },
             }}
           />
 
@@ -349,17 +349,18 @@ function AboutUs() {
         </MKBox>
 
         {/* 이미지 2 */}
-        <MKBox sx={{ mb: 6, px: 3 }}>
+        <MKBox sx={{ mb: 6, px: { xs: 3, md: 8 } }}>
           <MKBox
             component="img"
             src={mobileStory2}
             alt="금다연 이야기 2"
             sx={{
-              width: "100%",
+              width: { xs: "100%", md: "60%" },
               height: "auto",
               display: "block",
               borderRadius: "16px",
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              margin: { xs: "0 auto", md: "0 auto" },
             }}
           />
         </MKBox>
@@ -417,17 +418,18 @@ function AboutUs() {
         </MKBox>
 
         {/* 이미지 3 */}
-        <MKBox sx={{ mb: 6, px: 3 }}>
+        <MKBox sx={{ mb: 6, px: { xs: 3, md: 8 } }}>
           <MKBox
             component="img"
             src={mobileStory3}
             alt="금다연 이야기 3"
             sx={{
-              width: "100%",
+              width: { xs: "100%", md: "60%" },
               height: "auto",
               display: "block",
               borderRadius: "16px",
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              margin: { xs: "0 auto", md: "0 auto" },
             }}
           />
         </MKBox>
@@ -493,17 +495,18 @@ function AboutUs() {
         </MKBox>
 
         {/* 이미지 4 */}
-        <MKBox sx={{ mb: 6, px: 3 }}>
+        <MKBox sx={{ mb: 6, px: { xs: 3, md: 8 } }}>
           <MKBox
             component="img"
             src={mobileStory4}
             alt="금다연 이야기 4"
             sx={{
-              width: "100%",
+              width: { xs: "100%", md: "60%" },
               height: "auto",
               display: "block",
               borderRadius: "16px",
               boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+              margin: { xs: "0 auto", md: "0 auto" },
             }}
           />
         </MKBox>
@@ -554,8 +557,8 @@ function AboutUs() {
 
 
         {/* 이미지 5와 6 (같은 행) */}
-        <MKBox sx={{ mb: 6, px: 3 }}>
-          <Grid container spacing={2}>
+        <MKBox sx={{ mb: 6, px: { xs: 3, md: 8 } }}>
+          <Grid container spacing={2} sx={{ maxWidth: { xs: "100%", md: "60%" }, margin: { xs: "0 auto", md: "0 auto" } }}>
             <Grid item xs={6}>
               <MKBox
                 component="img"
