@@ -279,7 +279,7 @@ function AboutUs() {
           sx={{
             position: "relative",
             width: "100%",
-            height: { xs: "450px", md: "250px" },
+            height: { xs: "450px", md: "200px" },
             overflow: "hidden",
           }}
         >
@@ -289,10 +289,9 @@ function AboutUs() {
             alt="금다연 이야기 1"
             sx={{
               width: "100%",
-              height: { xs: "600px", md: "300px" },
+              height: "100%",
               objectFit: "cover",
               objectPosition: "center",
-              transform: { xs: "translateY(-20%)", md: "translateY(-10%)" },
             }}
           />
 

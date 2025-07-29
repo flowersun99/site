@@ -17,7 +17,7 @@ function HeroSection({ image, title, subtitle, imageHeight = "450px" }) {
         sx={{
           position: "relative",
           width: "100%",
-          height: imageHeight,
+          height: { xs: imageHeight, md: "200px" },
           overflow: "hidden",
         }}
       >
@@ -27,10 +27,9 @@ function HeroSection({ image, title, subtitle, imageHeight = "450px" }) {
           alt={title}
           sx={{
             width: "100%",
-            height: "600px",
+            height: "100%",
             objectFit: "cover",
             objectPosition: "center",
-            transform: "translateY(-20%)",
           }}
         />
 

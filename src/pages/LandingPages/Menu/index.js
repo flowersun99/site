@@ -29,8 +29,9 @@ import lunchmenu2 from "assets/images/lunchmenu/lunchmenu2.jpg";
 import lunchmenu3 from "assets/images/lunchmenu/lunchmenu3.png";
 
 // Menu data
-// import { menuItems } from "data/menuData";
+import { yakseonMenuItems } from "data/menuData";
 import MenuCardGrid from "components/MenuCardGrid";
+import YakseonMenuSection from "components/YakseonMenuSection";
 
 
 function Menu() {
@@ -382,6 +383,40 @@ function Menu() {
             />
           </MKBox>
         </MKBox>
+      </MKBox>
+
+      {/* 약선보양식 단품 메뉴 섹션 */}
+      <MKBox
+        sx={{
+          width: "100%",
+          height: { xs: "auto", md: "100vh" },
+          minHeight: { xs: "100vh", md: "100vh" },
+          backgroundImage: `url(${menu1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          position: "relative",
+          py: { xs: 4, md: 0 },
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: { xs: "transparent", md: "rgba(0, 0, 0, 0.5)" },
+          },
+        }}
+      >
+        {/* 약선보양 메뉴 섹션 */}
+        <YakseonMenuSection
+          title="약선보양식 단품 메뉴"
+          subtitle="(하루전 예약가능 - 주중만 이용가능)"
+          menuItems={yakseonMenuItems}
+        />
       </MKBox>
     </PageLayout>
   );
