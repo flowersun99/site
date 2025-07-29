@@ -435,7 +435,7 @@ function Presentation() {
                   fontSize: { xs: "0.875rem", md: "1rem" }
                 }}
               >
-                특허받은 웰빙 식단
+                특허받은 웰빙 메뉴
               </MKTypography>
             </Grid>
 
@@ -577,7 +577,7 @@ function Presentation() {
                     wordBreak: "keep-all"
                   }}
                 >
-                  특허받은 웰빙 식단
+                  특허받은 웰빙 메뉴
                 </MKTypography>
               </MKBox>
             </Grid>
