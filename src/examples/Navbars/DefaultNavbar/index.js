@@ -505,8 +505,8 @@ function DefaultNavbar({
               src={logo}
               alt="금다연"
               sx={{
-                height: { xs: "40px", md: "120px" },
-                width: { xs: "84px", md: "253.82px" },
+                height: { xs: "70px", md: "120px" },
+                width: { xs: "135px", md: "253.82px" },
                 filter: light && !transparent ? "brightness(0) invert(1)" : "none",
               }}
             />

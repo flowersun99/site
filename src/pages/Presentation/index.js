@@ -435,7 +435,7 @@ function Presentation() {
                   fontSize: { xs: "0.875rem", md: "1rem" }
                 }}
               >
-                특허받은 웰빙 메뉴
+                특허받은 웰빙 식단
               </MKTypography>
             </Grid>
 
@@ -460,7 +460,7 @@ function Presentation() {
                   fontSize: { xs: "0.875rem", md: "1rem" }
                 }}
               >
-                상견례, 피로연, 돌잔치 등
+                비지니스 PT, 상견례, 피로연, 돌잔치/ 다양한 개별룸 제공
               </MKTypography>
             </Grid>
 
@@ -577,7 +577,7 @@ function Presentation() {
                     wordBreak: "keep-all"
                   }}
                 >
-                  특허받은 웰빙 메뉴
+                  특허받은 웰빙 식단
                 </MKTypography>
               </MKBox>
             </Grid>
@@ -616,7 +616,7 @@ function Presentation() {
                     wordBreak: "keep-all"
                   }}
                 >
-                  상견례,피로연,돌잔치 등
+                  비지니스 PT, 상견례, 피로연, 돌잔치/ 다양한 개별룸 제공
                 </MKTypography>
               </MKBox>
             </Grid>
@@ -889,7 +889,7 @@ function Presentation() {
                 fontWeight: "bold",
               }}
             >
-              금다연 메뉴
+              메뉴 설명
             </MKTypography>
             <MKTypography
               variant="h5"
@@ -899,7 +899,7 @@ function Presentation() {
                 opacity: 0.8,
               }}
             >
-              전통 한식의 정성을 담은 다양한 상차림
+              전통 한정식의 정성을 담은 다양한 상차림
             </MKTypography>
 
           </MKBox>
@@ -952,7 +952,8 @@ function Presentation() {
       >
         {/* 약선보양 메뉴 섹션 */}
         <YakseonMenuSection
-          title="약선보양 단품 메뉴"
+          title="약선보양식 단품 메뉴"
+          subtitle="(하루전 예약가능 - 주중만 이용가능)"
           menuItems={yakseonMenuItems}
         />
       </MKBox>
