@@ -6,7 +6,7 @@ import MKTypography from "components/MKTypography";
 import Grid from "@mui/material/Grid";
 import YakseonMenuItem from "components/YakseonMenuItem";
 
-function YakseonMenuSection({ title, menuItems }) {
+function YakseonMenuSection({ title, subtitle, menuItems }) {
   // 1350px 이상에서 2개씩 보이도록 설정
   const isLargeScreen = useMediaQuery("(min-width:1350px)");
   const isMediumScreen = useMediaQuery("(min-width:900px)");
@@ -38,11 +38,26 @@ function YakseonMenuSection({ title, menuItems }) {
         variant="h2"
         color="white"
         textAlign="center"
-        mb={3}
+        mb={2}
         sx={{ fontSize: { xs: "1.7rem", sm: "1.5rem", md: "1.6rem" } }}
       >
         {title}
       </MKTypography>
+      
+      {subtitle && (
+        <MKTypography
+          variant="body1"
+          color="white"
+          textAlign="center"
+          mb={3}
+          sx={{ 
+            fontSize: { xs: "0.9rem", sm: "0.85rem", md: "0.9rem" },
+            opacity: 0.8
+          }}
+        >
+          {subtitle}
+        </MKTypography>
+      )}
 
       <Grid container spacing={2}>
         {menuItems.map((item) => (
@@ -57,6 +72,7 @@ function YakseonMenuSection({ title, menuItems }) {
 
 YakseonMenuSection.propTypes = {
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -67,7 +83,6 @@ YakseonMenuSection.propTypes = {
       image: PropTypes.string.isRequired,
     })
   ).isRequired,
-
 };
 
 export default YakseonMenuSection; 
