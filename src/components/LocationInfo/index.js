@@ -473,7 +473,7 @@ function LocationInfo({
                     fontWeight: "bold",
                   }}
                 >
-                  길안내
+                  매장안내
                 </MKTypography>
 
               {navigationButtons.map((button, index) => (
@@ -513,8 +513,8 @@ function LocationInfo({
                       }
                       alt={button.name}
                       sx={{
-                        width: "24px",
-                        height: "24px",
+                        width: "34px",
+                        height: "34px",
                         objectFit: "contain",
                       }}
                     />

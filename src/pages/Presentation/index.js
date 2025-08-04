@@ -491,17 +491,18 @@ function Presentation() {
           </Grid>
         </MKBox>
 
-        {/* 예약문의 버튼 - 모바일에서만 표시 */}
+        {/* 예약하기 버튼 - 모바일에서만 표시 */}
         <MKBox
           component="a"
-          href="tel:062-374-1000"
+          href="https://m.booking.naver.com/booking/6/bizes/502326/items/5466313?area=bmp&lang=ko&service-target=map-pc&startDate=2025-07-30&theme=place"
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             position: "relative",
             zIndex: 2,
             display: { xs: "flex", md: "none" },
             alignItems: "center",
             justifyContent: "center",
-            gap: 2,
             backgroundColor: "transparent",
             border: "2px solid white",
             borderRadius: "8px",
@@ -517,7 +518,6 @@ function Presentation() {
             },
           }}
         >
-          <Icon sx={{ color: "white !important", "& *": { color: "white !important" } }}>phone</Icon>
           <MKTypography
             variant="body1"
             color="white"
@@ -526,9 +526,8 @@ function Presentation() {
               fontSize: { xs: "1rem", md: "1.1rem" },
             }}
           >
-            예약문의
+            예약하기
           </MKTypography>
-          <Icon sx={{ color: "white !important", "& *": { color: "white !important" } }}>arrow_forward</Icon>
         </MKBox>
 
         {/* 정보 카드들 */}
