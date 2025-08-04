@@ -491,7 +491,7 @@ function Presentation() {
           </Grid>
         </MKBox>
 
-        {/* 예약하기 버튼 - 모바일에서만 표시 */}
+        {/* 예약하기 버튼 - 모든 화면에서 표시 */}
         <MKBox
           component="a"
           href="https://m.booking.naver.com/booking/6/bizes/502326/items/5466313?area=bmp&lang=ko&service-target=map-pc&startDate=2025-07-30&theme=place"
@@ -500,7 +500,7 @@ function Presentation() {
           sx={{
             position: "relative",
             zIndex: 2,
-            display: { xs: "flex", md: "none" },
+            display: "flex",
             alignItems: "center",
             justifyContent: "center",
             backgroundColor: "transparent",
@@ -511,7 +511,7 @@ function Presentation() {
             textDecoration: "none",
             transition: "all 0.3s ease",
             mb: { xs: 8, md: 0 },
-            mt: { xs: 4, md: 0 },
+            mt: { xs: 4, md: 50 }, // 데스크탑에서 상단 여백 추가
             "&:hover": {
               backgroundColor: "white",
               color: "black",
