@@ -86,7 +86,7 @@ function DefaultFooter() {
               fontWeight: 500,
             }}
           >
-            사업자 등록번호: 000-00-000000
+            사업자 등록번호: 409-05-88741
           </MKTypography>
           <MKTypography
             variant="body1"
