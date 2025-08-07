@@ -27,6 +27,9 @@ import MenuCardGrid from "components/MenuCardGrid";
 import MenuSection from "components/MenuSection";
 import YakseonMenuSection from "components/YakseonMenuSection";
 import { menuItems, yakseonMenuItems } from "data/menuData";
+
+import slicefir from "assets/images/slice/fir.jpg";
+import slicesec from "assets/images/slice/sec.jpg";
 import sliceOne from "assets/images/slice/one.jpg";
 import sliceTwo from "assets/images/slice/two.jpg";
 import sliceThree from "assets/images/slice/three.jpg";
@@ -45,7 +48,7 @@ function Presentation() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const sliceImages = [sliceOne, sliceTwo, sliceThree, sliceFour, sliceFive, sliceSix, sliceSeven];
+  const sliceImages = [slicefir, slicesec, sliceOne, sliceTwo, sliceThree, sliceFour, sliceFive, sliceSix, sliceSeven];
 
   const giftSets = [
     {
