@@ -384,7 +384,7 @@ function Presentation() {
               mb: { xs: 1, md: 2 },
             }}
           >
-            건강을 위한
+            특허받은 명품
           </MKTypography>
           <MKTypography
             variant="h1"
