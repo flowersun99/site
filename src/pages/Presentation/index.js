@@ -120,7 +120,7 @@ function Presentation() {
         routes={routes}
         transparent
         light
-        sticky
+        sticky={false}
         onMobileMenuToggle={toggleMobileMenu}
       />
 
@@ -375,6 +375,9 @@ function Presentation() {
           }}
         >
           <MKTypography
+            fontFamily="Noto Serif KR"
+            fontWeight="bold"
+            fontStyle="normal"
             variant="h1"
             color="white"
             sx={{
@@ -387,6 +390,9 @@ function Presentation() {
             특허받은 명품
           </MKTypography>
           <MKTypography
+            fontFamily="Noto Serif KR"
+            fontWeight="bold"
+            fontStyle="normal"
             variant="h1"
             color="white"
             sx={{

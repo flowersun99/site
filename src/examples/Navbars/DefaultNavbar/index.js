@@ -448,7 +448,7 @@ function DefaultNavbar({
       sx={
         sticky
           ? {
-              position: "sticky",
+              position: "fixed",
               top: 0,
               zIndex: 10,
               background: transparent
