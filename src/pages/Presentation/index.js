@@ -15,10 +15,8 @@ import chalim3 from "assets/images/chalim3.png";
 import room1 from "assets/images/room1.jpg";
 import room2 from "assets/images/room2.jpg";
 import presentFirst from "assets/images/presentSet/first.jpg";
-import presentSecond from "assets/images/presentSet/second.jpg";
 import presentThird from "assets/images/presentSet/third.jpg";
 import presentFour from "assets/images/presentSet/four.jpg";
-import presentFive from "assets/images/presentSet/five.jpg";
 import presentSix from "assets/images/presentSet/six.jpg";
 
 import LocationInfo from "components/LocationInfo";
@@ -52,43 +50,23 @@ function Presentation() {
 
   const giftSets = [
     {
-      title: "영광 법성포 보리굴비 선물세트",
+      title: "영광법성포 구운보리굴비 가정용 (5미)",
       image: presentFirst,
-      originalPrice: "210,000원",
-      discount: "64%",
-      price: "75,000원",
+      price: "65,000원",
     },
     {
-      title: "금다연 맛보장 배추김치 5kg",
-      image: presentSecond,
-      price: "75,000원",
-    },
-    {
-      title: "[추천상품] 고추장굴비1구 + 고추장황태1구 선물세트",
+      title: "(추천상품)국내산 참조기 고추장굴비 1구 + 고추장황태 1구 선물세트 (각 500g)",
       image: presentThird,
-      originalPrice: "210,000원",
-      discount: "64%",
-      price: "75,000원",
+      price: "110,000원",
     },
     {
-      title: "영광법성포 참조기 고추장 굴비 500g 선물세트",
+      title: "국내산 참조기 고추장굴비 1구 가정용 (500g)",
       image: presentFour,
-      originalPrice: "170,000원",
-      discount: "59%",
       price: "69,000원",
     },
     {
-      title: "금다연 특허받은 매실절임 1구 500g",
-      image: presentFive,
-      originalPrice: "70,000원",
-      discount: "50%",
-      price: "35,000원",
-    },
-    {
-      title: "밥도둑 명품 금다연 고추장 황태 500g 선물세트",
+      title: "밥도둑 명품 고추장황태 1구 가정용 (500g)",
       image: presentSix,
-      originalPrice: "100,000원",
-      discount: "65%",
       price: "35,000원",
     },
   ];

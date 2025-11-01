@@ -7,13 +7,13 @@ import menu4 from "assets/images/gemenu/menu4.jpg";
 export const menuItems = [
   {
     id: "moran-a",
-    name: "모란상 A",
+    name: "모란 A",
     englishName: "Peony table set A",
     price: "2인 120,000원",
   },
   {
     id: "moran-b", 
-    name: "모란상 B",
+    name: "모란 B",
     englishName: "Peony table set B",
     price: "2인 180,000원",
   },
