@@ -12,7 +12,7 @@ export const menuItems = [
     price: "2인 120,000원",
   },
   {
-    id: "moran-b", 
+    id: "moran-b",
     name: "모란 B",
     englishName: "Peony table set B",
     price: "2인 180,000원",
@@ -27,7 +27,7 @@ export const menuItems = [
     id: "yeonkkot",
     name: "연꽃상",
     englishName: "Lotus table set",
-    price: "3, 4인 200,000원",
+    price: "3, 4인 220,000원",
   },
   {
     id: "mugunghwa",

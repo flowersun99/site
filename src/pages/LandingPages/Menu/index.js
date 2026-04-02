@@ -91,7 +91,7 @@ function Menu() {
           <MenuCardGrid />
         </MKBox>
 
-                {/* 메뉴 변경 안내 */}
+        {/* 메뉴 변경 안내 */}
         <MKBox sx={{ mt: 6 }}>
           <MKTypography
             variant="body2"
@@ -316,7 +316,7 @@ function Menu() {
                     />
                   </MKBox>
                   <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" }, fontWeight: "bold" }}>
-                    69,000원
+                    80,000원
                   </MKTypography>
                 </MKBox>
                 <MKBox sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -333,7 +333,7 @@ function Menu() {
                     />
                   </MKBox>
                   <MKTypography variant="body2" sx={{ fontSize: { xs: "0.9rem", md: "1.1rem" }, fontWeight: "bold" }}>
-                    84,000원
+                    92,000원
                   </MKTypography>
                 </MKBox>
               </MKBox>
