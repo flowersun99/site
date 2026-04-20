@@ -12,7 +12,7 @@ import naverLogo from "assets/images/mobile_location/naverlogo.png";
 import kakaoLogo from "assets/images/mobile_location/kakologo.png";
 import googleLogo from "assets/images/mobile_location/googlelogo.png";
 
-function LocationInfo({ 
+function LocationInfo({
   title = "금다연 오시는 길",
   showTitle = true,
   layout = "desktop", // "desktop" | "mobile"
@@ -55,15 +55,6 @@ function LocationInfo({
         kakao: "https://kko.kakao.com/FRYyX-KoLT"
       }
     },
-    {
-      title: "제 3주차장",
-      description: "상무주차장 (대형 SUV / 상시 가능)",
-      iconColor: "#dc3545",
-      links: {
-        naver: "https://naver.me/FPUXEP5y",
-        kakao: "https://kko.kakao.com/2FRPBMiWsn"
-      }
-    },
   ],
   address = {
     main: "광주 서구 상무연하로 72",
@@ -80,7 +71,7 @@ function LocationInfo({
           px: 2,
         }}
       >
-                {/* 구글 지도 iframe */}
+        {/* 구글 지도 iframe */}
         <MKBox
           sx={{
             mb: 4,
@@ -159,7 +150,7 @@ function LocationInfo({
           </MKTypography>
         </MKBox>
 
-        
+
 
         {/* 네비게이션 버튼들 */}
         <MKBox sx={{ mb: 6 }}>
@@ -205,8 +196,8 @@ function LocationInfo({
                     component="img"
                     src={
                       button.name === "네이버 지도" ? naverLogo :
-                      button.name === "구글 지도" ? googleLogo :
-                      kakaoLogo
+                        button.name === "구글 지도" ? googleLogo :
+                          kakaoLogo
                     }
                     alt={button.name}
                     sx={{
@@ -476,67 +467,67 @@ function LocationInfo({
                   매장안내
                 </MKTypography>
 
-              {navigationButtons.map((button, index) => (
-                <MKBox
-                  key={index}
-                  component="a"
-                  href={button.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    width: "100%",
-                    padding: "16px 20px",
-                    backgroundColor: "white",
-                    color: "dark",
-                    borderRadius: "12px",
-                    textDecoration: "none",
-                    marginBottom: "12px",
-                    border: "2px solid #e9ecef",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      transform: "translateY(-2px)",
-                      boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                      borderColor: button.color,
-                    },
-                  }}
-                >
-                  <MKBox sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                    <MKBox
-                      component="img"
-                      src={
-                        button.name === "네이버 지도" ? naverLogo :
-                        button.name === "구글 지도" ? googleLogo :
-                        kakaoLogo
-                      }
-                      alt={button.name}
-                      sx={{
-                        width: "34px",
-                        height: "34px",
-                        objectFit: "contain",
-                      }}
-                    />
-                    <MKTypography
-                      variant="body1"
-                      sx={{
-                        fontWeight: "bold",
-                        fontSize: "1rem",
-                      }}
-                    >
-                      {button.name}
-                    </MKTypography>
+                {navigationButtons.map((button, index) => (
+                  <MKBox
+                    key={index}
+                    component="a"
+                    href={button.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                      width: "100%",
+                      padding: "16px 20px",
+                      backgroundColor: "white",
+                      color: "dark",
+                      borderRadius: "12px",
+                      textDecoration: "none",
+                      marginBottom: "12px",
+                      border: "2px solid #e9ecef",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-2px)",
+                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                        borderColor: button.color,
+                      },
+                    }}
+                  >
+                    <MKBox sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                      <MKBox
+                        component="img"
+                        src={
+                          button.name === "네이버 지도" ? naverLogo :
+                            button.name === "구글 지도" ? googleLogo :
+                              kakaoLogo
+                        }
+                        alt={button.name}
+                        sx={{
+                          width: "34px",
+                          height: "34px",
+                          objectFit: "contain",
+                        }}
+                      />
+                      <MKTypography
+                        variant="body1"
+                        sx={{
+                          fontWeight: "bold",
+                          fontSize: "1rem",
+                        }}
+                      >
+                        {button.name}
+                      </MKTypography>
+                    </MKBox>
+                    <Icon sx={{ color: button.color }}>arrow_forward</Icon>
                   </MKBox>
-                  <Icon sx={{ color: button.color }}>arrow_forward</Icon>
-                </MKBox>
-              ))}
+                ))}
+              </MKBox>
             </MKBox>
-          </MKBox>
-        </Grid>
+          </Grid>
         </Grid>
 
-        
+
 
         {/* 주차정보 섹션 */}
         <MKBox>
