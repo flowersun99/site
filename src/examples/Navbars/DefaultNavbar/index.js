@@ -261,6 +261,8 @@ function DefaultNavbar({
               <Icon
                 fontSize="small"
                 sx={{ fontWeight: "normal", verticalAlign: "middle", mr: -0.5 }}
+                translate="no"
+                className="notranslate"
               >
                 keyboard_arrow_right
               </Icon>
@@ -309,7 +311,7 @@ function DefaultNavbar({
         >
           <MKBox borderRadius="lg">
             <MKTypography variant="h1" color="white">
-              <Icon ref={setArrowRef} sx={{ mt: -3 }}>
+              <Icon ref={setArrowRef} sx={{ mt: -3 }} translate="no" className="notranslate">
                 arrow_drop_up
               </Icon>
             </MKTypography>
@@ -393,6 +395,8 @@ function DefaultNavbar({
                       <Icon
                         fontSize="small"
                         sx={{ fontWeight: "normal", verticalAlign: "middle", mr: -0.5 }}
+                        translate="no"
+                        className="notranslate"
                       >
                         keyboard_arrow_right
                       </Icon>
@@ -562,7 +566,7 @@ function DefaultNavbar({
             sx={{ cursor: "pointer" }}
             onClick={openMobileNavbar}
           >
-            <Icon fontSize="default" sx={{ color: "white" }}>
+            <Icon fontSize="default" sx={{ color: "white" }} translate="no" className="notranslate">
               menu
             </Icon>
           </MKBox>

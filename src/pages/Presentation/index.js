@@ -133,7 +133,13 @@ function Presentation() {
             zIndex: 10000,
           }}
         >
-          <Icon sx={{ fontSize: "4rem", color: "white !important" }}>close</Icon>
+          <Icon
+            sx={{ fontSize: "4rem", color: "white !important" }}
+            translate="no"
+            className="notranslate"
+          >
+            close
+          </Icon>
         </MKBox>
 
         {/* 메뉴 항목들 */}
@@ -249,7 +255,7 @@ function Presentation() {
           {/* 후기 */}
           <MKBox
             component="a"
-            href="#reviews"
+            href="/review"
             onClick={closeMobileMenu}
             sx={{
               display: "block",
@@ -298,6 +304,8 @@ function Presentation() {
                 },
               },
             }}
+            translate="no"
+            className="notranslate"
           >
             keyboard_arrow_down
           </Icon>
@@ -676,6 +684,8 @@ function Presentation() {
                 },
               },
             }}
+            translate="no"
+            className="notranslate"
           >
             keyboard_arrow_down
           </Icon>
@@ -1437,7 +1447,13 @@ function Presentation() {
                   },
                 }}
               >
-                <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_left</Icon>
+                <Icon
+                  sx={{ color: "black", fontSize: "1.2rem" }}
+                  translate="no"
+                  className="notranslate"
+                >
+                  chevron_left
+                </Icon>
               </MKBox>
 
               {/* 오른쪽 화살표 */}
@@ -1463,7 +1479,13 @@ function Presentation() {
                   },
                 }}
               >
-                <Icon sx={{ color: "black", fontSize: "1.2rem" }}>chevron_right</Icon>
+                <Icon
+                  sx={{ color: "black", fontSize: "1.2rem" }}
+                  translate="no"
+                  className="notranslate"
+                >
+                  chevron_right
+                </Icon>
               </MKBox>
 
               {/* 이미지 인디케이터 */}

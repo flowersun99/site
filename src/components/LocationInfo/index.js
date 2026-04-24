@@ -249,7 +249,11 @@ function LocationInfo({
             <MKBox key={index} sx={{ mb: 3 }}>
               <MKBox sx={{ mb: 2 }}>
                 <MKBox display="flex" alignItems="center" mb={1}>
-                  <Icon sx={{ color: parking.iconColor, mr: 1, fontSize: "1.2rem" }}>
+                  <Icon
+                    sx={{ color: parking.iconColor, mr: 1, fontSize: "1.2rem" }}
+                    translate="no"
+                    className="notranslate"
+                  >
                     local_parking
                   </Icon>
                   <MKTypography
@@ -519,7 +523,9 @@ function LocationInfo({
                         {button.name}
                       </MKTypography>
                     </MKBox>
-                    <Icon sx={{ color: button.color }}>arrow_forward</Icon>
+                    <Icon sx={{ color: button.color }} translate="no" className="notranslate">
+                      arrow_forward
+                    </Icon>
                   </MKBox>
                 ))}
               </MKBox>
@@ -560,7 +566,13 @@ function LocationInfo({
                   }}
                 >
                   <MKBox display="flex" alignItems="center" mb={2}>
-                    <Icon sx={{ color: parking.iconColor, mr: 1 }}>local_parking</Icon>
+                    <Icon
+                      sx={{ color: parking.iconColor, mr: 1 }}
+                      translate="no"
+                      className="notranslate"
+                    >
+                      local_parking
+                    </Icon>
                     <MKTypography
                       variant="h6"
                       color="dark"
