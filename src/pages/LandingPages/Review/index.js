@@ -115,7 +115,9 @@ function Review() {
             }}
           >
             <MKBox display="flex" alignItems="center" mb={2}>
-              <Icon sx={{ color: "#007bff", mr: 1 }}>info</Icon>
+              <Icon sx={{ color: "#007bff", mr: 1 }} translate="no" className="notranslate">
+                info
+              </Icon>
               <MKTypography
                 variant="h5"
                 color="dark"
@@ -129,7 +131,9 @@ function Review() {
             </MKBox>
             
             <MKBox display="flex" alignItems="center" mb={3}>
-              <Icon sx={{ color: "#28a745", mr: 1 }}>check_circle</Icon>
+              <Icon sx={{ color: "#28a745", mr: 1 }} translate="no" className="notranslate">
+                check_circle
+              </Icon>
               <MKTypography
                 variant="body2"
                 color="text"

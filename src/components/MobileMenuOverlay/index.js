@@ -52,7 +52,13 @@ function MobileMenuOverlay({ isOpen, onClose }) {
           justifyContent: "center",
         }}
       >
-        <Icon sx={{ fontSize: "4rem", backgroundColor: "white" }}>arrow_back</Icon>
+        <Icon
+          sx={{ fontSize: "4rem", backgroundColor: "white" }}
+          translate="no"
+          className="notranslate"
+        >
+          arrow_back
+        </Icon>
       </MKBox>
 
       {/* 메뉴 항목들 */}
@@ -121,6 +127,8 @@ function MobileMenuOverlay({ isOpen, onClose }) {
               },
             },
           }}
+          translate="no"
+          className="notranslate"
         >
           keyboard_arrow_down
         </Icon>

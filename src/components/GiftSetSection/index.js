@@ -138,7 +138,9 @@ function GiftSetSection({
             >
               {smartStoreButtonText}
             </MKTypography>
-            <Icon>arrow_forward</Icon>
+            <Icon translate="no" className="notranslate">
+              arrow_forward
+            </Icon>
           </MKBox>
         )}
       </MKBox>

@@ -94,7 +94,13 @@ function AboutUs() {
             justifyContent: "center",
           }}
         >
-          <Icon sx={{ fontSize: "4rem", backgroundColor: "white" }}>arrow_back</Icon>
+          <Icon
+            sx={{ fontSize: "4rem", backgroundColor: "white" }}
+            translate="no"
+            className="notranslate"
+          >
+            arrow_back
+          </Icon>
         </MKBox>
 
         {/* 메뉴 항목들 */}
@@ -261,6 +267,8 @@ function AboutUs() {
                 },
               },
             }}
+            translate="no"
+            className="notranslate"
           >
             keyboard_arrow_down
           </Icon>
