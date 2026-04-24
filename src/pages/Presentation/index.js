@@ -255,7 +255,7 @@ function Presentation() {
           {/* 후기 */}
           <MKBox
             component="a"
-            href="#reviews"
+            href="/review"
             onClick={closeMobileMenu}
             sx={{
               display: "block",
